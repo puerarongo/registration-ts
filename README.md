@@ -1,32 +1,45 @@
-Тестове завдання Trainee Frontend developer
+Front-end task
 
-Умови: Рівень розмовної англійської не нижче B2. Вік 19+ Базове знання
-будь-якого js фреймворка react/vue/AngularJs Знання git Базове знайомство з
-Typescript Знання html/css Час виконання - 2 неділі.
+Потрібно реалізувати сторінку реєстрації за даним дизайном з викорисанням API:
+https://www.figma.com/file/Pn55mRcGwM60JnfeE6mQmd/Merchant-Dashboard?node-id=1582%3A30842&t=KBOIns9CLsg4tOPg-0 -
+Figma
 
-Бажаний Стек виконання тестового завдання: Typescript NextJs/ReactJs Tailwindcss
+https://vast-basin-98801.herokuapp.com - API
 
-Задача: Імплементувати 2 адаптивні сторінки:
+/shopify :GET
 
-Job list Detailed Job
+Parameters name string
 
-Job list page: Figma desktop:
-https://www.figma.com/file/RH8vWb5CQ9NLm7iRgU4AeT/Test-Task-FE-ALLab?node-id=1%3A480
-Figma mobile:
-https://www.figma.com/file/RH8vWb5CQ9NLm7iRgU4AeT/Test-Task-FE-ALLab?node-id=1%3A2909
+/google :GET
 
-API:
+Parameters
 
-UPDATE: В разі якщо API не працює, зробіть mock відповіді з сервера(захардкодьте
-свій json)
+- -
 
-https://api.json-generator.com/templates/ZM1r0eic3XEy/data Bearer token:
-wm3gg940gy0xek1ld98uaizhz83c6rh2sir9f9fu
+register :POST
 
-Accepted Criteria:
+Request body name string email string password string shop_token string
+google_token string
 
-З отриманих даних з апі генеруємо список jobs, при клікі на Job title -
-відкривається detailed job page. Всі дані на сторінках мають бути отримані з
-АПІ. Максимально приближена верстка до дизайну. Відправити емейл на адресу
-review@aleannlab.com, з лінком на гітхаб репозиторій і лінком на робочий додаток
-(github pages, heroku, glitch etc.)
+До реалізації:
+
+1. Всі сторінки які вказані в дизайні;
+2. Мобільна версія;
+3. Планшетна версія;
+4. Анімації;
+
+Необхідні для виконання завдання технології: ● Typescript ● React/Next.js
+
+● Можна використовувати будь-яку UI бібліотеку(особливо цікаві React Bootstap,
+Tailwind або Material UI).
+
+На виконання дається 5 календарних днів, які починаються в момент надсилання
+завдання. Результати роботи повинен бути задеплоєний (наприклад на GitHub
+pages). Це посилання потрібно скинути разом з посиланням на код проекту.
+
+Якщо не вдалось виконати основні завдання в зазначений термін, тоді:
+
+1. Доробити до працездатного стану програму і обовʼязково задеплоїти її;
+2. Вказати які саме завдання не були виконані;
+
+Нехай щастить!
