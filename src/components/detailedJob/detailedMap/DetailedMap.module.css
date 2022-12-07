@@ -1,0 +1,73 @@
+.section {
+    @apply mx-auto;
+}
+
+.title {
+    @apply font-bold text-title text-[#3A4562] leading-[34px] mb-[10px];
+}
+
+.border {
+    @apply mb-[20px] bg-[#3A4562] opacity-10;
+}
+
+.container {
+    @apply w-[370px] h-[440px] bg-[#2A3047] rounded-[8px];
+}
+
+.feedback__container {
+    @apply flex py-[31px] mx-auto;
+}
+
+.into__container {
+    @apply mx-auto;
+}
+
+.name {
+    @apply font-bold text-[16px] leading-[19px] text-[#E7EAF0] mb-[17px];
+}
+
+.address__container {
+    @apply flex;
+}
+
+.svg__position {
+    @apply w-[13px] h-[18px] mr-[8px];
+}
+
+.address {
+    @apply font-normal text-[16px] leading-[23px] text-[#E7EAF0] mb-[6px];
+}
+
+.contact {
+    @apply font-normal text-[16px] leading-[23px] text-[#fff] opacity-60;
+}
+
+.contact:not(:last-child) {
+    @apply mb-[6px]
+}
+
+.map__container {
+    @apply flex;
+}
+
+.map {
+    @apply mx-auto
+}
+
+.svg__marker {
+    @apply w-[26px] h-[36px];
+}
+
+@media screen and (min-width: 1200px) {
+    .title {
+        @apply hidden;
+    }
+
+    .border {
+        @apply hidden;
+    }
+
+    .container {
+        @apply w-[400px];
+    }
+}

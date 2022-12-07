@@ -1,0 +1,76 @@
+.container {
+    @apply flex px-[16px] pt-[15px] pb-[25px];
+}
+
+.img {
+    @apply min-w-[66px] h-[66px] mr-[20px] mt-[30px] rounded-[50%];
+}
+
+.into {
+    @apply flex mb-[15px];
+}
+
+.date {
+    @apply font-light text-[#878D9D] text-[14px] leading-[17px];
+}
+
+.title {
+    @apply font-normal text-mainText leading-main-text mb-[5px];
+}
+
+.text,
+.address {
+    @apply font-normal text-[16px] leading-[25px] text-[#878D9D];
+}
+
+.text {
+    @apply mb-[8px];
+}
+
+.container__address {
+    @apply flex items-center;
+}
+
+/* * SVG */
+.svg__stars {
+    @apply w-[55px] h-[10px] mr-auto;
+}
+
+.svg__position {
+    @apply w-[13px] h-[18px] mr-[8px];
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        @apply py-[24px] px-[16px];
+    }
+
+    .img {
+        @apply min-w-[85px] h-[85px] mr-[26px];
+    }
+
+    .title {
+        @apply font-bold text-subTitle mb-[8px];
+    }
+
+    /* * Date & Into */
+    .into {
+        @apply items-center ml-auto mb-0;
+    }
+
+    .date {
+        @apply font-normal  text-[16px] leading-[25px] text-end;
+    }
+
+    .svg__bigstars {
+        @apply w-[100px] h-[20px] mr-[30px];
+    }
+
+    .date__container {
+        @apply block ml-auto w-[150px];
+    }
+
+    .svg__rectangle {
+        @apply w-[20px] h-[25px] ml-auto mb-[70px];
+    }
+}

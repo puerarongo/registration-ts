@@ -1,0 +1,29 @@
+.pagination {
+    @apply flex;
+}
+
+.pagination ul {
+    @apply w-[515px] justify-center text-center bg-[#fff]
+    mx-auto px-[24px] py-[15px] rounded-[10px];
+}
+
+.pagination ul li {
+    @apply font-bold text-[#70778B] text-subTitle leading-[25px];
+}
+
+
+.pagination ul li:first-child {
+    @apply text-[#7D859C] mr-auto pr-[30px] border-r;
+}
+
+.pagination ul li:last-child {
+    @apply text-[#7D859C] ml-auto pl-[30px] border-l;
+}
+
+.pagination ul li a:hover {
+    @apply text-[#5876C5];
+}
+
+.pagination ul li:not(:last-child) {
+    @apply pr-[25px]
+}

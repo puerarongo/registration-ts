@@ -1,0 +1,224 @@
+.main__container {
+    @apply max-w-[400px];
+}
+
+.main__container,
+.container__header {
+    @apply block;
+}
+
+.container__header {
+    @apply mb-[32px];
+}
+
+.header__title {
+    @apply font-bold text-title text-[#3A4562] leading-[34px] mb-[12px];
+}
+
+.header__border1,
+.header__border2 {
+    @apply bg-[#3A4562] opacity-10 mb-[25px];
+}
+
+.header__border2 {
+    @apply hidden;
+}
+
+.header__link {
+    @apply inline-flex font-normal text-[16px] text-header-link leading-main-text;
+}
+
+.header__link:not(:last-child) {
+    @apply mr-[36px];
+}
+
+.svg__star,
+.svg__shape {
+    @apply w-[20px] h-[20px] mr-[12px];
+}
+
+.svg__rectangle {
+    @apply w-[20px] h-[25px] mr-[12px];
+}
+
+/* * Salary */
+.title {
+    @apply font-bold text-[24px] leading-[30px] mb-[10px];
+}
+
+.container__title {
+    @apply flex items-center;
+}
+
+.date {
+    @apply text-[#38415d9a] opacity-60 font-light text-[13px] leading-[25px];
+}
+
+.container__salary {
+    @apply ml-auto;
+}
+
+.salary {
+    @apply font-bold text-subTitle leading-[25px] text-end;
+}
+
+.salary__text {
+    @apply font-normal text-mainText leading-main-text mb-[4px];
+}
+
+/* * Description */
+.description__container {
+    @apply mb-[15px];
+}
+
+.description__text {
+    @apply font-normal text-mainText leading-main-text;
+}
+
+.description__text:not(:last-child) {
+    @apply mb-[43px];
+}
+
+.description__title {
+    @apply font-bold text-subTitle leading-[25px] mb-[10px];
+}
+
+.container__button {
+    @apply text-center mb-[135px];
+}
+
+.button {
+    @apply py-[18px] px-[30px] uppercase font-semibold text-[12px] text-[#fff] bg-[#384564] rounded-[8px]
+    cursor-pointer;
+}
+
+
+/* * Additional Info */
+.container {
+    @apply mb-[55px];
+}
+
+.additional__border {
+    @apply mb-[15px] bg-[#3A4562] opacity-10;
+}
+
+.additional__subtitle {
+    @apply font-normal text-mainText leading-main-text mb-[10px];
+}
+
+.additional__list {
+    @apply flex mb-[22px];
+}
+
+.item__employment,
+.item__benefits {
+    @apply text-center w-[122px] py-[17px] px-0 rounded-[8px] cursor-pointer
+    font-bold text-[16px] leading-[16px] border border-solid;
+}
+
+.item__employment {
+    @apply bg-background-employment text-[#55699E] border-border-employment;
+}
+
+.item__benefits {
+    @apply placeholder-background-benefits text-[#988B49] border-[#FFCF00];
+}
+
+.img__list {
+    @apply block ;
+}
+
+.img {
+    @apply w-[200px] h-[115px] rounded-[8px] mx-auto;
+}
+
+.item__employment:not(:last-child),
+.item__benefits:not(:last-child) {
+    @apply mb-0 mr-[10px]
+}
+
+.item__img:not(:last-child) {
+    @apply mb-[20px];
+}
+
+/* ! =================================== MEDIA =================================== ! */
+
+@media screen and (min-width: 1200px) {
+    .main__container {
+        @apply max-w-[700px] mr-[120px];
+    }
+
+    .container__header {
+        @apply flex items-center mb-0;
+    }
+
+    .header__title {
+        @apply mr-auto mb-[9px];
+    }
+
+    .header__border1 {
+        @apply hidden;
+    }
+
+    .header__link:not(:last-child) {
+        @apply mr-[31px];
+    }
+
+    .header__border2 {
+        @apply block;
+    }
+
+    /* * Salary */
+    .title {
+        @apply w-[70%] mr-[60px];
+    }
+
+    .container__title {
+        @apply flex;
+    }
+
+    .salary__text {
+        @apply font-normal text-mainText leading-main-text mb-0;
+    }
+
+    .date {
+        @apply font-normal text-mainText leading-main-text mb-[8px];
+    }
+
+    /* * Description */
+    .description__container {
+        @apply mb-[40px];
+    }
+
+    .description__text:not(:last-child) {
+        @apply mb-[40px];
+    }
+
+    .container__button {
+        @apply text-left mb-[85px];
+    }
+
+    /* * Additional Info */
+    .container {
+        @apply mb-[90px];
+    }
+
+    .additional__list {
+        @apply flex;
+    }
+
+    .img__list {
+        @apply flex;
+    }
+
+    .item__employment,
+    .item__benefits {
+        @apply w-[222px];
+    }
+
+    .item__employment:not(:last-child),
+    .item__benefits:not(:last-child),
+    .item__img:not(:last-child) {
+        @apply mb-0 mr-[10px]
+    }
+}
