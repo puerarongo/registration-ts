@@ -1,8 +1,8 @@
 import React, { useEffect, useContext } from 'react';
 import { FormContext } from '../../formContext/formProvider';
-import styles from '../../snopifyStore/snopifyConnect/SnopifyConnect.module.css';
+import styles from '../../shopifyStore/shopifyConnect/ShopifyConnect.module.css';
 import svgPath from '../../../services/svgPath';
-import ISnopifyPage from '../../../types/typeSnopifyStep';
+import ISnopifyPage from '../../../types/typeShopifyStep';
 import { googleGet } from '../../../services/authAPI';
 
 

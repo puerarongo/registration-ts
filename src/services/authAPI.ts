@@ -3,7 +3,7 @@ import IBodyData from "../types/typeBodyData";
 
 const BASE_URL: string = 'https://vast-basin-98801.herokuapp.com';
 
-export const snopifyGet = async (name: string) => {
+export const shopifyGet = async (name: string) => {
     const response = await axios.get(`${BASE_URL}/shopify`, { params: { name } })
     return response;
 };

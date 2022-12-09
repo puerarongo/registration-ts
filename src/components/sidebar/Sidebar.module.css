@@ -7,7 +7,41 @@
 }
 
 .svg__label {
+    @apply mb-[16px] w-[100px] h-[32px];
+}
+
+.svg__label {
     width: 100px;
     height: 32px;
     margin-bottom: 16px;
+}
+
+.switch__container {
+    @apply flex;
+}
+
+.switch__left,
+.switch__right {
+    @apply flex px-[8px] font-normal text-[12px] leading-[16px] text-[#4F637D] items-center;
+}
+
+.switch__left {
+    @apply mr-auto;
+}
+
+.switch__right {
+    @apply ml-auto;
+}
+
+.svg__left,
+.svg__right {
+    @apply w-[10px] h-[10px];
+}
+
+.svg__left {
+    @apply mr-[7px];
+}
+
+.svg__right {
+    @apply ml-[7px];
 }

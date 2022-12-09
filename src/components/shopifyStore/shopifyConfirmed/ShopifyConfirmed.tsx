@@ -1,20 +1,24 @@
 import React, { useEffect, useContext } from 'react';
 import { FormContext } from '../../formContext/formProvider';
-import { Link } from 'react-router-dom';
-import styles from './SnopifyConfirmed.module.css';
-import ISnopifyPage from '../../../types/typeSnopifyStep';
+import styles from './ShopifyConfirmed.module.css';
+import IShopifyPage from '../../../types/typeShopifyStep';
 import picturePath from '../../../services/picturePath';
 
-const SnopifyConfirmed: React.FC<ISnopifyPage> = ({ step }) => {
-    const { snopify, setPageStatus } = useContext(FormContext);
+const ShopifyConfirmed: React.FC<IShopifyPage> = ({ step }) => {
+    const { shopify, setShopify, setPageStatus } = useContext(FormContext);
     const clickHandle = () => step('done');
+
+    const wrongStore = () => {
+        setShopify('');
+        step('connect');
+    };
 
     useEffect(() => { setPageStatus(true) }, [setPageStatus]);
 
     return (
         <>
             <img className={styles.img} src={picturePath.raccoon} alt='raccoon face' />
-            {snopify ? (
+            {shopify ? (
                 <>
                     <h2 className={styles.token__title}>STORE-NAME already connected</h2>
                 </>
@@ -28,10 +32,10 @@ const SnopifyConfirmed: React.FC<ISnopifyPage> = ({ step }) => {
             <button className={styles.button} type='button' onClick={clickHandle}>Continue</button>
             <p className={styles.text__link}>
                 Wrong store?
-                <Link to='login' className={styles.link}>Connect another one</Link>
+                <button className={styles.link} type="button" onClick={wrongStore}>Connect another one</button>
             </p>
         </>
     )
 };
 
-export default SnopifyConfirmed;
+export default ShopifyConfirmed;

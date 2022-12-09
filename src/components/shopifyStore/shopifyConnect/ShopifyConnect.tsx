@@ -1,21 +1,20 @@
 import React, { useEffect, useContext } from 'react';
 import { FormContext } from '../../formContext/formProvider';
-import styles from './SnopifyConnect.module.css';
+import styles from './ShopifyConnect.module.css';
 import svgPath from '../../../services/svgPath';
-import ISnopifyPage from '../../../types/typeSnopifyStep';
-import { snopifyGet } from '../../../services/authAPI';
+import IShopifyPage from '../../../types/typeShopifyStep';
+import { shopifyGet } from '../../../services/authAPI';
 
 
-
-const SnopifyConnect: React.FC<ISnopifyPage> = ({ step }) => {
-    const { setSnopify, setPageStatus } = useContext(FormContext);
+const ShopifyConnect: React.FC<IShopifyPage> = ({ step }) => {
+    const { setShopify, setPageStatus } = useContext(FormContext);
 
     useEffect(() => { setPageStatus(false) }, [setPageStatus]);
 
     const connectHandle = async () => {
             step('confirmed');
-        await snopifyGet('Axios')
-            .then(res => setSnopify(res.data.token))
+        await shopifyGet('Axios')
+            .then(res => setShopify(res.data.token))
             .catch(err => console.error(err));
             //step('confirmed');
     };
@@ -60,4 +59,4 @@ const SnopifyConnect: React.FC<ISnopifyPage> = ({ step }) => {
     )
 };
 
-export default SnopifyConnect;
+export default ShopifyConnect;

@@ -1,10 +1,10 @@
 import React, {useEffect, useContext} from 'react';
 import { FormContext } from '../../formContext/formProvider';
-import styles from './SnopifyDone.module.css';
+import styles from './ShopifyDone.module.css';
 import picturePath from '../../../services/picturePath';
 import IStepPage from '../../../types/typeStepPage';
 
-const SnopifyDone: React.FC<IStepPage> = ({ step, setStep }) => {
+const ShopifyDone: React.FC<IStepPage> = ({ step, setStep }) => {
     const { setPageStatus } = useContext(FormContext);
     
     useEffect(() => { setPageStatus(true) }, [setPageStatus]);
@@ -19,4 +19,4 @@ const SnopifyDone: React.FC<IStepPage> = ({ step, setStep }) => {
     )
 };
 
-export default SnopifyDone;
+export default ShopifyDone;

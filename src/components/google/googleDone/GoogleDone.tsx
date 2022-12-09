@@ -1,21 +1,21 @@
 import React, { useEffect, useContext } from 'react';
 import { FormContext } from '../../formContext/formProvider';
-import styles from '../../snopifyStore/snopifyDone/SnopifyDone.module.css';
+import styles from '../../shopifyStore/shopifyDone/ShopifyDone.module.css';
 import picturePath from '../../../services/picturePath';
 import IStepPage from '../../../types/typeStepPage';
 import { register } from '../../../services/authAPI';
 
 
 const GoogleDone: React.FC<IStepPage> = ({ step, setStep }) => {
-    const { email, name, password, snopify, google, setPageStatus } = useContext(FormContext);
+    const { email, name, password, shopify, google, setPageStatus } = useContext(FormContext);
 
     useEffect(() => { setPageStatus(true) }, [setPageStatus]);
 
     const dataHandler = async () => {
+        const body = { name, email, password, shop_token: shopify, google_token: google };
+        const res = await register(body);
+        console.log('Google Done', res);
         setStep(step + 1);
-        const body = { email, name, password, snopify, google }
-        const res = await register(body)
-        console.log(res)
     }
     
     return (

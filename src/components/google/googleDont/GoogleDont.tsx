@@ -1,10 +1,15 @@
-import React from 'react';
-import styles from '../../snopifyStore/snopifyDont/SnopifyDont.module.css';
+import React, { useEffect, useContext } from 'react';
+import { FormContext } from '../../formContext/formProvider';
+import styles from '../../shopifyStore/shopifyDont/ShopifyDont.module.css';
 import svgPath from '../../../services/svgPath';
-import ISnopifyPage from '../../../types/typeSnopifyStep';
+import ISnopifyPage from '../../../types/typeShopifyStep';
 
 
 const GoogleDont: React.FC<ISnopifyPage> = ({ step }) => {
+    const { setPageStatus } = useContext(FormContext);
+
+    useEffect(() => { setPageStatus(false) }, [setPageStatus]);
+
     const clickHandle = () => step('connect');
 
     return (

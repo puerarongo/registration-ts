@@ -9,7 +9,7 @@ interface ISidebar extends IStepPage {
 };
 
 const Sidebar: React.FC<ISidebar> = ({ step, setStep, active }) => {
-    const { snopify, google } = useContext(FormContext);
+    const { shopify, google } = useContext(FormContext);
     
     const prevStep = (): void => setStep(step - 1);
     const nextStep = (): void => setStep(step + 1);
@@ -20,7 +20,7 @@ const Sidebar: React.FC<ISidebar> = ({ step, setStep, active }) => {
     };
 
     const isDisabledNext = () => {
-        if (step === 2 && !snopify) return true
+        if (step === 2 && !shopify) return true
         else if (step === 3 && !google) return true
         else if (step >= 4) return true
         else return false
@@ -35,11 +35,22 @@ const Sidebar: React.FC<ISidebar> = ({ step, setStep, active }) => {
                 </svg>
                 <div>ANIMATION PLACE</div>
                 {active && (
-                    <div>
-                        <button type='button' onClick={() => prevStep()}
-                            disabled={isDisabledPrev()}>Prev</button>
-                        <button type='button' onClick={() => nextStep()}
-                            disabled={isDisabledNext()}>Next</button>
+                    <div className={styles.switch__container}>
+                        <button className={styles.switch__left} type='button' onClick={() => prevStep()}
+                            disabled={isDisabledPrev()}>
+                            <svg className={styles.svg__left}>
+                                <use href={svgPath.left_arrow + "#left_arrow"}></use>
+                            </svg>
+                            Prev
+                        </button>
+                        
+                        <button className={styles.switch__right} type='button' onClick={() => nextStep()}
+                            disabled={isDisabledNext()}>
+                            Next
+                            <svg className={styles.svg__right}>
+                                <use href={svgPath.right_arrow + "#right_arrow"}></use>
+                            </svg>
+                        </button>
                     </div>
                 )}
             </div>

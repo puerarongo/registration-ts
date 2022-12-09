@@ -7,9 +7,9 @@ export const FormProvider: React.FC = ({ children }) => {
     const [email, setEmail] = useState<string>('');
     const [name, setName] = useState<string>('');
     const [password, setPassword] = useState<string>('');
-    const [snopify, setSnopify] = useState<string>('');
+    const [shopify, setShopify] = useState<string>('');
     const [google, setGoogle] = useState<string>('');
-    const [snopifyStep, setSnopifyStep] = useState<string>('connect');
+    const [shopifyStep, setShopifyStep] = useState<string>('connect');
     const [googleStep, setGoogleStep] = useState<string>('connect');
     const [pageStatus, setPageStatus] = useState<boolean>(false);
 
@@ -22,12 +22,12 @@ export const FormProvider: React.FC = ({ children }) => {
                 setName,
                 password,
                 setPassword,
-                snopify,
-                setSnopify,
+                shopify,
+                setShopify,
                 google,
                 setGoogle,
-                snopifyStep,
-                setSnopifyStep,
+                shopifyStep,
+                setShopifyStep,
                 googleStep,
                 setGoogleStep,
                 pageStatus,

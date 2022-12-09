@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './SnopifyDont.module.css';
+import styles from './ShopifyDont.module.css';
 import svgPath from '../../../services/svgPath';
-import ISnopifyPage from '../../../types/typeSnopifyStep';
+import IShopifyPage from '../../../types/typeShopifyStep';
 
 
-const SnopifyDont: React.FC<ISnopifyPage> = ({ step }) => {
+const ShopifyDont: React.FC<IShopifyPage> = ({ step }) => {
     const clickHandle = () => step('connect');
 
     return (
@@ -27,4 +27,4 @@ const SnopifyDont: React.FC<ISnopifyPage> = ({ step }) => {
     )
 };
 
-export default SnopifyDont;
+export default ShopifyDont;

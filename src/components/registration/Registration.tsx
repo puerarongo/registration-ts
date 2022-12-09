@@ -4,7 +4,7 @@ import { FormContext } from '../formContext/formProvider';
 import styles from './Registration.module.css';
 import Sidebar from '../sidebar/Sidebar';
 import Welcome from '../welcome/Welcome';
-import SnopifyStore from '../snopifyStore/SnopifyStore';
+import SnopifyStore from '../shopifyStore/ShopifyStore';
 import Google from '../google/Google';
 
 
