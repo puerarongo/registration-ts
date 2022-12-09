@@ -1,0 +1,15 @@
+.main {
+    @apply block;
+}
+
+.section {
+    @apply flex; 
+}
+
+/* ! =================================== MEDIA =================================== ! */
+
+/* @media screen and (min-width: 1350px) {
+    .section {
+        @apply flex;
+    }
+} */

@@ -1,0 +1,30 @@
+.svg__label {
+    @apply hidden mb-[28px] w-[100px] h-[100px] 
+}
+
+.title {
+    @apply mb-[8px] font-semibold text-[24px] leading-[29px] text-left text-[#134267];
+}
+
+.text {
+    @apply mb-[32px] font-normal text-[14px] leading-[21px] text-left text-[#4F637D];
+}
+
+.form {}
+
+.label {
+    @apply mb-[8px] font-medium text-[12px] leading-[18px]
+}
+
+.button {
+    @apply block mb-[16px] py-[11px] w-[330px] text-[14px] leading-[21px] text-[#FFFFFF] bg-[#32ABF2] rounded-[8px] text-center cursor-pointer;
+}
+
+.text__link,
+.link {
+    @apply mb-[40px] text-center text-[12px] leading-[18px] text-[#4F637D];
+}
+
+.link {
+    @apply ml-[5px] text-[#32ABF2];
+}

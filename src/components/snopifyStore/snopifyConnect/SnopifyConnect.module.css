@@ -1,0 +1,40 @@
+.title {
+    @apply mb-[8px] font-semibold text-[24px] leading-[29px] text-left text-[#134267];
+}
+
+.text {
+    @apply mb-[32px] font-normal text-[14px] leading-[21px] text-left text-[#4F637D];
+}
+
+.list {
+    @apply mb-[32px] px-[16px] py-[16px] bg-[#F8F9FC];
+}
+
+.item {
+    @apply flex;
+}
+
+.svg__label {
+    @apply w-[16px] h-[16px] mr-[15px];
+}
+
+.item__into {
+    @apply block;
+}
+
+.item__title {
+    @apply mb-[4px] font-medium text-[14px] leading-[21px] text-[#134267];
+}
+
+.item__text {
+    @apply mb-[16px] font-normal text-[12px] leading-[18px] text-[#4F637D];
+}
+
+.button {
+    @apply block mb-[16px] py-[11px] w-[330px] text-[14px] leading-[21px] text-[#FFFFFF] bg-[#32ABF2] 
+    rounded-[8px] text-center cursor-pointer;
+}
+
+.button__dont {
+    @apply flex mb-[40px] mx-[auto] text-[12px] leading-[18px] text-[#4F637D] cursor-pointer;;
+}

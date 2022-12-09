@@ -1,0 +1,13 @@
+.section {
+    @apply flex;
+}
+
+.container {
+    @apply mx-auto mb-[32px] max-w-[400px];
+}
+
+.svg__label {
+    width: 100px;
+    height: 32px;
+    margin-bottom: 16px;
+}

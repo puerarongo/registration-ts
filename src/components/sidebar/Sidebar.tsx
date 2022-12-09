@@ -1,9 +1,49 @@
-import React from 'react';
-// import styles from './Sidebar.module.css';
+import React, { useContext } from 'react';
+import { FormContext } from '../formContext/formProvider';
+import styles from './Sidebar.module.css';
+import svgPath from '../../services/svgPath';
+import IStepPage from '../../types/typeStepPage';
 
-const Sidebar: React.FC = () => {
+interface ISidebar extends IStepPage {
+    active: boolean
+};
+
+const Sidebar: React.FC<ISidebar> = ({ step, setStep, active }) => {
+    const { snopify, google } = useContext(FormContext);
+    
+    const prevStep = (): void => setStep(step - 1);
+    const nextStep = (): void => setStep(step + 1);
+
+    const isDisabledPrev = () => {
+        if (step <= 1) return true
+        else return false
+    };
+
+    const isDisabledNext = () => {
+        if (step === 2 && !snopify) return true
+        else if (step === 3 && !google) return true
+        else if (step >= 4) return true
+        else return false
+    };
+
+
     return (
-        <>Sidebar</>
+        <section className={styles.section}>
+            <div className={styles.container}>
+                <svg className={styles.svg__label}>
+                    <use href={svgPath.label + "#label"}></use>
+                </svg>
+                <div>ANIMATION PLACE</div>
+                {active && (
+                    <div>
+                        <button type='button' onClick={() => prevStep()}
+                            disabled={isDisabledPrev()}>Prev</button>
+                        <button type='button' onClick={() => nextStep()}
+                            disabled={isDisabledNext()}>Next</button>
+                    </div>
+                )}
+            </div>
+        </section>
     )
 };
 
