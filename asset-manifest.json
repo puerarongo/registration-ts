@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/registration-ts/static/css/main.197b427b.css",
-    "main.js": "/registration-ts/static/js/main.b08b45ac.js",
+    "main.css": "/registration-ts/static/css/main.ae161b52.css",
+    "main.js": "/registration-ts/static/js/main.d3d1a685.js",
     "static/media/background.jpg": "/registration-ts/static/media/background.d79c0716f899b327db61.jpg",
     "static/media/raccoon.jpg": "/registration-ts/static/media/raccoon.b2f0dbeff13b3662317a.jpg",
     "static/media/label.svg": "/registration-ts/static/media/label.a81214793d7d566a1e79a888a6a7906b.svg",
     "index.html": "/registration-ts/index.html",
     "static/media/check.svg": "/registration-ts/static/media/check.69be93756ed2a85d8abfb53feaed6e71.svg",
-    "main.197b427b.css.map": "/registration-ts/static/css/main.197b427b.css.map",
-    "main.b08b45ac.js.map": "/registration-ts/static/js/main.b08b45ac.js.map"
+    "static/media/right_arrow.svg": "/registration-ts/static/media/right_arrow.75bb959cd64379a664fddd671acbfdd4.svg",
+    "static/media/left_arrow.svg": "/registration-ts/static/media/left_arrow.a8b8946925814071d27e3bc087fa3825.svg",
+    "main.ae161b52.css.map": "/registration-ts/static/css/main.ae161b52.css.map",
+    "main.d3d1a685.js.map": "/registration-ts/static/js/main.d3d1a685.js.map"
   },
   "entrypoints": [
-    "static/css/main.197b427b.css",
-    "static/js/main.b08b45ac.js"
+    "static/css/main.ae161b52.css",
+    "static/js/main.d3d1a685.js"
   ]
 }
