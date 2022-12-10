@@ -1,5 +1,5 @@
 .main {
-    @apply block;
+    @apply block h-[100%];
 }
 
 .section {
@@ -8,8 +8,12 @@
 
 /* ! =================================== MEDIA =================================== ! */
 
-/* @media screen and (min-width: 1350px) {
-    .section {
+@media screen and (min-width: 1350px) {
+    .main{
         @apply flex;
     }
-} */
+
+    .section {
+        @apply w-[60%]
+    }
+}

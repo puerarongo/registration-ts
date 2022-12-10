@@ -3,7 +3,7 @@
 }
 
 .container {
-    @apply mx-auto mb-[32px] max-w-[400px];
+    @apply mx-auto px-[32px] py-[16px] max-w-[390px];
 }
 
 .svg__label {
@@ -14,6 +14,11 @@
     width: 100px;
     height: 32px;
     margin-bottom: 16px;
+}
+
+.step__identify {
+    @apply font-normal text-[12px] leading-[18px] text-[#4F637D];
+    text-align: left
 }
 
 .switch__container {
@@ -43,5 +48,44 @@
 }
 
 .svg__right {
-    @apply ml-[7px];
+    @apply ml-[7px] text-[#31e9bb];
 }
+
+/* ? Large */
+.large__container {
+    @apply ml-auto pr-[20px];
+}
+
+
+
+/* ! =================================== MEDIA =================================== ! */
+
+@media screen and (min-width: 1350px) {
+    .section {
+        @apply w-[40%] pt-[200px] pr-[120px] bg-[#0D3251] ;
+    }
+
+    .switch__container {
+        @apply mt-[54px];
+    }
+
+    .switch__left,
+    .switch__right {
+        @apply text-[16px] leading-[21px] text-[#93A8C1] bg-[#134267];
+    }
+
+    .switch__left:disabled,
+    .switch__right:disabled {
+        @apply px-[12px] py-[6px];
+        background: none;
+    }
+
+    .svg__left,
+    .svg__right {
+        @apply fill-[#93A8C1];
+    }
+
+    .slider {
+        @apply mt-[180px] mb-[55px]
+    }
+} 

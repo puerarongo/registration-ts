@@ -14,16 +14,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-
-.mapboxgl-control-container,
-.mapboxgl-ctrl-bottom-right,
-.mapboxgl-ctrl,
-.mapboxgl-ctrl-attrib,
-.mapboxgl-compact {
-  display: none;
-}
-
-.mapboxgl-canvas {
-  width: 370px;
-}

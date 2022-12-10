@@ -56,7 +56,7 @@ const Welcome: React.FC<IWelcome> = ({ step, setStep, funcActive }) => {
                   className={styles.input}
                   required
                   type="email"
-                  placeholder="your@email.com"
+                  placeholder="megachad@trychad.com"
                   name="email"
                   value={values.email}
                   onBlur={handleBlur}
@@ -69,7 +69,7 @@ const Welcome: React.FC<IWelcome> = ({ step, setStep, funcActive }) => {
                   className={styles.input}
                   required
                   type="name"
-                  placeholder="Name"
+                  placeholder="Mega Chad"
                   name="name"
                   value={values.name}
                   onBlur={handleBlur}
@@ -84,7 +84,7 @@ const Welcome: React.FC<IWelcome> = ({ step, setStep, funcActive }) => {
                     autoComplete='new-password'
                     name='password'
                     type='password'
-                    placeholder='Password'
+                    placeholder='Enter password'
                     // onCut={disableChange}
                     // onCopy={disableChange}
                     // onPaste={disableChange}

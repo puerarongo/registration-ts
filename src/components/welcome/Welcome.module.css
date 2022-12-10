@@ -1,5 +1,5 @@
 .container {
-    @apply mx-auto max-w-[330px];
+    @apply mx-auto px-[32px] py-[16px] max-w-[390px];
 }
 
 .main__title {

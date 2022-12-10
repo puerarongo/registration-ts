@@ -1,5 +1,5 @@
 .img {
-    @apply flex w-[160px] h-[160px] mx-auto mb-[20px];
+    @apply flex w-[160px] h-[160px] mx-auto mb-[20px] mt-[105px];
 }
 
 .title {
