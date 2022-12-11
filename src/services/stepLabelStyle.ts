@@ -18,6 +18,9 @@ export const stepLaybleStyle = {
     ".MuiStepIcon-root.Mui-active": {
         color: '#32ABF2'
     },
+    ".MuiStepConnector-root.MuiStepConnector-vertical.Mui-active": {
+        borderLeft: "1px solid #32ABF2"
+    },
     ".MuiStepIcon-root.Mui-completed": {
         color: '#32ABF2'
     }

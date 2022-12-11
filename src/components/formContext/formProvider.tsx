@@ -1,6 +1,5 @@
 import React, { useState, createContext } from "react";
 
-
 export const FormContext = createContext<any>('');
 
 export const FormProvider: React.FC = ({ children }) => {
@@ -12,6 +11,7 @@ export const FormProvider: React.FC = ({ children }) => {
     const [shopifyStep, setShopifyStep] = useState<string>('connect');
     const [googleStep, setGoogleStep] = useState<string>('connect');
     const [pageStatus, setPageStatus] = useState<boolean>(false);
+    
 
     return (
         <FormContext.Provider

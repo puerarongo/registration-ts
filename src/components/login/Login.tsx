@@ -6,6 +6,7 @@ import styles from './Login.module.css';
 
 const Login: React.FC = () => {
     return (
+        <section className={styles.section}>
         <div className={styles.container}>
             <svg className={styles.svg__label}>
                 <use href={svgPath.label + "#label"}></use>
@@ -69,7 +70,8 @@ const Login: React.FC = () => {
                 </form>
             )}
             </Formik>
-        </div>
+            </div>
+        </section>
     )
 };
 

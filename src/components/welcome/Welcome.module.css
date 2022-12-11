@@ -19,8 +19,9 @@
 }
 
 .input {
-    @apply mb-[24px] py-[11px] pl-[17px] pr-[10px] text-[16px] leading-[24px] text-[#030E16] bg-[#F8F9FC]
-    rounded-[4px] w-[330px];
+    @apply mb-[24px] py-[11px] pl-[17px] pr-[10px] text-[16px] leading-[24px]
+    border-[1px] border-solid border-[#F8F9FC]
+    text-[#030E16] bg-[#F8F9FC] rounded-[4px] w-[330px];
 }
 
 .input:hover,
@@ -66,7 +67,7 @@
 
 @media screen and (min-width: 1350px) {
     .container {
-        @apply max-w-[480px] px-[40px] pt-[64px] pb-[35px] mt-[130px] mb-[50px] rounded-[8px];
+        @apply h-[max-content] max-w-[480px] px-[40px] pt-[64px] pb-[35px] mt-[130px] mb-[50px] rounded-[8px];
         box-shadow: 0px 5px 20px rgba(108, 117, 139, 0.2);
     }
 

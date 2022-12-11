@@ -1,5 +1,9 @@
+.section {
+    @apply block;
+}
+
 .container {
-    @apply mx-auto pt-[16px] max-w-[330px];
+    @apply mx-auto px-[32px] py-[16px] max-w-[390px] bg-white rounded-[8px];
 }
 
 .svg__label {
@@ -23,12 +27,15 @@
 }
 
 .input {
-    @apply mb-[24px] py-[11px] pl-[17px] pr-[10px] text-[16px] leading-[24px] text-[#030E16] bg-[#F8F9FC] rounded-[4px] w-[330px];
+    @apply mb-[24px] py-[11px] pl-[17px] pr-[10px] text-[16px] leading-[24px]
+    border-[1px] border-solid border-[#F8F9FC]
+    text-[#030E16] bg-[#F8F9FC] rounded-[4px] w-[330px];
 }
 
 .input:hover,
-.input:active {
-    @apply border-cyan-500
+.input:active,
+.input:focus {
+    @apply border-[1px] border-solid border-[#32ABF2] transition-colors;
 }
 
 .button {
@@ -42,4 +49,44 @@
 
 .link {
     @apply ml-[5px] text-[#32ABF2];
+}
+
+/* ! =================================== MEDIA =================================== ! */
+@media screen and (min-width: 820px) and (max-width: 1349px) {
+    .section {
+        @apply bg-[url("../../img/images/background.jpg")] py-[50px];
+    }
+
+    .container {
+        @apply mx-auto px-[72px] pt-[32px] pb-[64px] max-w-[540px];
+        box-shadow: 0px 5px 20px rgba(108, 117, 139, 0.2);
+    }
+
+    .input {
+        @apply w-[396px];
+    }
+
+    .button {
+        @apply w-[396px];
+    }
+
+}
+
+@media screen and (min-width: 1350px) {
+    .section {
+        @apply bg-[url("../../img/images/background.jpg")] py-[50px];
+    }
+
+    .container {
+        @apply h-[max-content] max-w-[480px] px-[40px] pt-[64px] pb-[35px] mt-[130px] mb-[50px] rounded-[8px];
+        box-shadow: 0px 5px 20px rgba(108, 117, 139, 0.2);
+    }
+
+    .input {
+        @apply w-[400px];
+    }
+
+    .button {
+        @apply w-[400px];
+    }
 }

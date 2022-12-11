@@ -6,6 +6,7 @@ import larrow_left from '../img/larrow_left.svg';
 import larrow_right from '../img/larrow_right.svg';
 import google from '../img/google.svg';
 import checkStep from '../img/checkStep.svg';
+import checkStepInactive from '../img/checkStepInactive.svg';
 import sliderIcon from '../img/sliderIcon.svg';
 
 const svgPath = {
@@ -17,6 +18,7 @@ const svgPath = {
     larrow_right,
     google,
     checkStep,
+    checkStepInactive,
     sliderIcon
 };
 
