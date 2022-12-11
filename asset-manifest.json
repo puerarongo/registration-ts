@@ -1,19 +1,23 @@
 {
   "files": {
-    "main.css": "/registration-ts/static/css/main.ae161b52.css",
-    "main.js": "/registration-ts/static/js/main.d3d1a685.js",
+    "main.css": "/registration-ts/static/css/main.19ad54a0.css",
+    "main.js": "/registration-ts/static/js/main.6a8a0506.js",
     "static/media/background.jpg": "/registration-ts/static/media/background.d79c0716f899b327db61.jpg",
     "static/media/raccoon.jpg": "/registration-ts/static/media/raccoon.b2f0dbeff13b3662317a.jpg",
     "static/media/label.svg": "/registration-ts/static/media/label.a81214793d7d566a1e79a888a6a7906b.svg",
+    "static/media/google.svg": "/registration-ts/static/media/google.a63b97f2919c074d97afb60b1f9ac93c.svg",
     "index.html": "/registration-ts/index.html",
-    "static/media/check.svg": "/registration-ts/static/media/check.69be93756ed2a85d8abfb53feaed6e71.svg",
+    "static/media/checkStep.svg": "/registration-ts/static/media/checkStep.7ac9f44969a95de4a923388fc9bcc075.svg",
+    "static/media/check.svg": "/registration-ts/static/media/check.a0a234421d2a16cf19d66e2ba93d4c26.svg",
+    "static/media/larrow_right.svg": "/registration-ts/static/media/larrow_right.7d215a314b4e04e01dbcde49a482c656.svg",
+    "static/media/larrow_left.svg": "/registration-ts/static/media/larrow_left.f0e21340509a2f62b6a853a841d5ceb4.svg",
     "static/media/right_arrow.svg": "/registration-ts/static/media/right_arrow.75bb959cd64379a664fddd671acbfdd4.svg",
     "static/media/left_arrow.svg": "/registration-ts/static/media/left_arrow.a8b8946925814071d27e3bc087fa3825.svg",
-    "main.ae161b52.css.map": "/registration-ts/static/css/main.ae161b52.css.map",
-    "main.d3d1a685.js.map": "/registration-ts/static/js/main.d3d1a685.js.map"
+    "main.19ad54a0.css.map": "/registration-ts/static/css/main.19ad54a0.css.map",
+    "main.6a8a0506.js.map": "/registration-ts/static/js/main.6a8a0506.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae161b52.css",
-    "static/js/main.d3d1a685.js"
+    "static/css/main.19ad54a0.css",
+    "static/js/main.6a8a0506.js"
   ]
 }
