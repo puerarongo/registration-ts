@@ -1,5 +1,5 @@
 .svg__label {
-    @apply hidden mb-[28px] w-[100px] h-[100px] 
+    @apply mb-[16px] w-[100px] h-[32px];
 }
 
 .title {
@@ -22,9 +22,23 @@
 
 .text__link,
 .link {
-    @apply mb-[40px] text-center text-[12px] leading-[18px] text-[#4F637D];
+    @apply text-center text-[12px] leading-[18px] text-[#4F637D];
 }
 
 .link {
     @apply ml-[5px] text-[#32ABF2];
+}
+
+/* ! =================================== MEDIA =================================== ! */
+
+@media screen and (min-width: 820px) and (max-width: 1349px) {
+    .button {
+        @apply w-[396px];
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .button {
+        @apply w-[400px];
+    }
 }

@@ -26,7 +26,7 @@ interface ISidebar extends IStepPage {
 };
 
 const Sidebar: React.FC<ISidebar> = ({ step, setStep, active }) => {
-    const labelesArray =
+    const labelesArray: string[] =
         ["Welcome", "Connect your Shopify store", "Connect your customer support email", "Done"];
     const { shopify, google } = useContext(FormContext);
 
@@ -111,8 +111,8 @@ const Sidebar: React.FC<ISidebar> = ({ step, setStep, active }) => {
                     <div className={styles.large__container}>
                         <Box sx={{ width: '100%' }} >
                             <Stepper sx={stepLaybleStyle}  activeStep={step - 1} orientation="vertical">
-                                {labelesArray.map(elem => (
-                                    <Step sx={stepLaybleStyle}>
+                                        {labelesArray.map(( elem: string, index: number ) => (
+                                    <Step key={index} sx={stepLaybleStyle}>
                                         <StepLabel StepIconComponent={QontoStepIcon} sx={stepLaybleStyle}>
                                             {elem}
                                         </StepLabel>

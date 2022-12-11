@@ -1,5 +1,5 @@
 .img {
-    @apply flex w-[160px] h-[160px] mx-auto mb-[20px] mt-[105px];
+    @apply flex w-[160px] h-[160px] mx-auto mb-[20px] mt-[90px];
 }
 
 .title {
@@ -12,4 +12,25 @@
 
 .button {
     @apply block mb-[16px] py-[11px] w-[330px] text-[14px] leading-[21px] text-[#FFFFFF] bg-[#32ABF2] rounded-[8px] text-center cursor-pointer;
+}
+
+
+@media screen and (min-width: 820px) and (max-width: 1349px) {
+    .img {
+        @apply mt-[100px];
+    }
+
+    .button {
+        @apply w-[396px];
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .img {
+        @apply mt-[60px];
+    }
+
+    .button {
+        @apply w-[400px] mb-[90px];
+    }
 }

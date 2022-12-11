@@ -1,3 +1,19 @@
 .container {
-    @apply mx-auto px-[32px] py-[16px] max-w-[390px];
+    @apply mx-auto px-[32px] py-[16px] max-w-[390px] bg-white;
+    height: max-content;
+}
+
+/* ! =================================== MEDIA =================================== ! */
+
+@media screen and (min-width: 820px) and (max-width: 1349px) {
+    .container {
+        @apply mx-auto mb-[50px] px-[72px] pt-[32px] pb-[64px] max-w-[540px] rounded-[8px];
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .container {
+        @apply max-w-[480px] px-[40px] pt-[64px] pb-[35px] mt-[130px] mb-[50px] rounded-[8px];
+        box-shadow: 0px 5px 20px rgba(108, 117, 139, 0.2);
+    }
 }

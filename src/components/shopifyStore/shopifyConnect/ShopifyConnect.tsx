@@ -4,6 +4,7 @@ import styles from './ShopifyConnect.module.css';
 import svgPath from '../../../services/svgPath';
 import IShopifyPage from '../../../types/typeShopifyStep';
 import { shopifyGet } from '../../../services/authAPI';
+import Media from 'react-media';
 
 
 const ShopifyConnect: React.FC<IShopifyPage> = ({ step }) => {
@@ -22,7 +23,18 @@ const ShopifyConnect: React.FC<IShopifyPage> = ({ step }) => {
 
     return (
         <>
-            <h2 className={styles.title}>Connect to Shopify Store</h2>
+            <Media queries={{ large: '(min-width: 1350px)' }}>
+                {media => (
+                    <>
+                        {media.large && (
+                            <svg className={styles.svg__label}>
+                                <use href={svgPath.label + "#label"}></use>
+                            </svg>
+                        )}
+                    </>
+                )}
+            </Media>
+            <h2 className={styles.title}>Connect your Shopify store</h2>
             <p className={styles.text}>Installs the Chad widget in your Shopify store and sets it up to display your customers order information and self-serve options.</p>
             <ul className={styles.list}>
                 <li className={styles.item}>
@@ -54,7 +66,7 @@ const ShopifyConnect: React.FC<IShopifyPage> = ({ step }) => {
                 </li>
             </ul>
             <button className={styles.button} type='button' onClick={connectHandle}>Connect store</button>
-            <button  className={styles.button__dont} type='button' onClick={dontUseHandle}>I dont use Shopify</button>
+            <button className={styles.button__dont} type='button' onClick={dontUseHandle}>I dont use Shopify</button>
         </>
     )
 };

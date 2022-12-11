@@ -15,6 +15,7 @@ const Registration: React.FC = () => {
 
     return (
         <section className={styles.main}>
+            <div className={styles.temporary__container}>
                 <Media queries={{ small: '(max-width: 1349px)', large: '(min-width: 1350px)' }}>
                     {media => (
                         <>
@@ -36,6 +37,7 @@ const Registration: React.FC = () => {
                         : <h2>Not Found</h2>
                     }
                 </div>
+            </div>
         </section>
     )
     

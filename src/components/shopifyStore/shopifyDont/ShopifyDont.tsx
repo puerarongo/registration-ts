@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './ShopifyDont.module.css';
 import svgPath from '../../../services/svgPath';
 import IShopifyPage from '../../../types/typeShopifyStep';
+import Media from 'react-media';
 
 
 const ShopifyDont: React.FC<IShopifyPage> = ({ step }) => {
@@ -9,9 +10,17 @@ const ShopifyDont: React.FC<IShopifyPage> = ({ step }) => {
 
     return (
         <>
-            <svg className={styles.svg__label}>
-                <use href={svgPath.label + "#label"}></use>
-            </svg>
+            <Media queries={{ large: '(min-width: 1350px)' }}>
+                {media => (
+                    <>
+                        {media.large && (
+                            <svg className={styles.svg__label}>
+                                <use href={svgPath.label + "#label"}></use>
+                            </svg>
+                        )}
+                    </>
+                )}
+            </Media>
             <h2 className={styles.title}>Dont use Shopify?</h2>
             <p className={styles.text}>Chad Beta is currently only available on Shopify. Well send you an email when Chad becomes available on your platform.</p>
             <form className={styles.form}>

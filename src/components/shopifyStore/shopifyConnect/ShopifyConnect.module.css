@@ -14,10 +14,6 @@
     @apply flex;
 }
 
-.svg__label {
-    @apply max-w-[16px] max-h-[16px] mr-[15px];
-}
-
 .item__into {
     @apply block;
 }
@@ -30,11 +26,51 @@
     @apply mb-[16px] font-normal text-[12px] leading-[18px] text-[#4F637D];
 }
 
+.button,
+.button__google {
+    @apply mb-[16px] w-[330px] text-[14px] leading-[21px] text-[#FFFFFF];
+}
+
 .button {
-    @apply block mb-[16px] py-[11px] w-[330px] text-[14px] leading-[21px] text-[#FFFFFF] bg-[#32ABF2] 
-    rounded-[8px] text-center cursor-pointer;
+    @apply block py-[11px] bg-[#32ABF2] rounded-[8px] text-center cursor-pointer;
 }
 
 .button__dont {
     @apply flex mb-[40px] mx-[auto] text-[12px] leading-[18px] text-[#4F637D] cursor-pointer;;
+}
+
+.button__google {
+    @apply flex bg-[#5383EC] ;
+    border: 1px solid #5383EC
+}
+
+.text__google {
+    @apply py-[15px] mx-auto;
+    text-align: center
+}
+
+.svg__label {
+    @apply mb-[16px] max-w-[30px] h-[32px];
+}
+
+.svg__container{
+    @apply p-[18px] bg-white;
+}
+.svg__google {
+    @apply w-[18px] h-[18px];
+}
+
+/* ! =================================== MEDIA =================================== ! */
+@media screen and (min-width: 820px) and (max-width: 1349px) {
+    .button,
+    .button__google {
+        @apply w-[396px];
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .button,
+    .button__google {
+        @apply w-[400px];
+    }
 }

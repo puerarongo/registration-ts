@@ -1,9 +1,11 @@
 import React, {useContext} from 'react';
 import styles from './Welcome.module.css';
 import IStepPage from '../../types/typeStepPage';
+import Media from 'react-media';
 import { Link } from 'react-router-dom';
 import { Formik } from 'formik';
 import { FormContext } from '../formContext/formProvider';
+import svgPath from '../../services/svgPath';
 
 interface IWelcome extends IStepPage {
   funcActive: Function
@@ -22,6 +24,17 @@ const Welcome: React.FC<IWelcome> = ({ step, setStep, funcActive }) => {
 
     return (
       <div className={styles.container}>
+        <Media queries={{ large: '(min-width: 1350px)' }}>
+          {media => (
+            <>
+              {media.large && (
+                <svg className={styles.svg__label}>
+                  <use href={svgPath.label + "#label"}></use>
+                </svg>
+            )}
+            </>
+          )}
+        </Media>
         <h1 className={styles.main__title}>Welcome to Chad</h1>
         <p className={styles.text}>Go live in 10 minutes! Our self-service widget empowers your customers to manage orders and track shipments 24/7 without driving you crazy.</p>
           <Formik

@@ -1,5 +1,5 @@
 .img {
-    @apply flex w-[100px] h-[100px] mx-auto mb-[40px] mt-[105px]; 
+    @apply flex w-[100px] h-[100px] mx-auto mb-[40px] mt-[90px]; 
 }
 
 .token__title {
@@ -22,9 +22,38 @@
 
 .text__link,
 .link {
-    @apply mb-[40px] text-center text-[12px] leading-[18px] text-[#4F637D];
+    @apply text-center text-[12px] leading-[18px] text-[#4F637D];
+}
+
+.text__link {
+    @apply mb-[40px];
 }
 
 .link {
     @apply ml-[5px] text-[#32ABF2];
+}
+
+/* ! =================================== MEDIA =================================== ! */
+@media screen and (min-width: 820px) and (max-width: 1349px) {
+    .img {
+        @apply mt-[100px];
+    }
+
+    .button{
+        @apply w-[396px];
+    }
+
+    .text__link {
+        @apply mb-[0px];
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .img {
+        @apply mt-[60px];
+    }
+
+    .button {
+        @apply w-[400px] mb-[90px];
+    }
 }
