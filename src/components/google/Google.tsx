@@ -11,9 +11,11 @@ const Google: React.FC<IStepPage> = ({ step, setStep }) => {
 
     return (
         <div className={styles.container}>
-            {googleStep === 'connect' ? <GoogleConnect step={setGoogleStep} />
-                : googleStep === 'done' ? <GoogleDone step={step} setStep={setStep} />
-                : <GoogleDont step={setGoogleStep} />
+            {googleStep === 'connect' ? <GoogleConnect
+                step={step} setStep={setStep} setGoogleStep={setGoogleStep} />
+                : googleStep === 'done' ?
+                    <GoogleDone step={step} setStep={setStep} setGoogleStep={setGoogleStep} />
+                : <GoogleDont setGoogleStep={setGoogleStep} />
             }
         </div>
     )

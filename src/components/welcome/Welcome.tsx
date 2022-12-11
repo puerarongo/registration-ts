@@ -13,7 +13,7 @@ interface IWelcome extends IStepPage {
 
 
 const Welcome: React.FC<IWelcome> = ({ step, setStep, funcActive }) => {
-  const { email, setEmail, name, setName, password, setPassword } = useContext(FormContext);
+  const { email, setEmail, name, setName, password, setPassword, setWelcomeActive } = useContext(FormContext);
 
   //const clickHandler = (email: string, name: string, password: string) => {
   //  setEmail(email);
@@ -51,6 +51,7 @@ const Welcome: React.FC<IWelcome> = ({ step, setStep, funcActive }) => {
               setPassword(password);
               setStep(step + 1);
               funcActive(true);
+              setWelcomeActive(true);
             }}
           >
             {({

@@ -10,8 +10,6 @@
     @apply mb-[32px] font-normal text-[14px] leading-[21px] text-left text-[#4F637D];
 }
 
-.form {}
-
 .label {
     @apply mb-[8px] font-medium text-[12px] leading-[18px]
 }

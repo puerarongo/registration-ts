@@ -2,24 +2,26 @@ import React, { useEffect, useContext } from 'react';
 import { FormContext } from '../../formContext/formProvider';
 import styles from './ShopifyConnect.module.css';
 import svgPath from '../../../services/svgPath';
-import IShopifyPage from '../../../types/typeShopifyStep';
 import { shopifyGet } from '../../../services/authAPI';
 import Media from 'react-media';
 
+interface IShopifyConnect {
+    setShopifyStep: Function
+}
 
-const ShopifyConnect: React.FC<IShopifyPage> = ({ step }) => {
+const ShopifyConnect: React.FC<IShopifyConnect> = ({ setShopifyStep }) => {
     const { setShopify, setPageStatus } = useContext(FormContext);
 
     useEffect(() => { setPageStatus(false) }, [setPageStatus]);
 
     const connectHandle = async () => {
-            step('confirmed');
+            setShopifyStep('confirmed');
         await shopifyGet('Axios')
             .then(res => setShopify(res.data.token))
             .catch(err => console.error(err));
             //step('confirmed');
     };
-    const dontUseHandle = () => step('dont');
+    const dontUseHandle = () => setShopifyStep('dont');
 
     return (
         <>

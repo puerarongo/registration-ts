@@ -2,15 +2,20 @@ import React, { useEffect, useContext } from 'react';
 import { FormContext } from '../../formContext/formProvider';
 import styles from '../../shopifyStore/shopifyDont/ShopifyDont.module.css';
 import svgPath from '../../../services/svgPath';
-import ISnopifyPage from '../../../types/typeShopifyStep';
+import SelectComponent from '../../select/Select';
 
+interface IGoogleDont {
+    setGoogleStep: Function
+};
 
-const GoogleDont: React.FC<ISnopifyPage> = ({ step }) => {
+const GoogleDont: React.FC<IGoogleDont> = ({ setGoogleStep }) => {
     const { setPageStatus } = useContext(FormContext);
+    const dataArr = ['1', '2', '3'];
 
     useEffect(() => { setPageStatus(false) }, [setPageStatus]);
 
-    const clickHandle = () => step('connect');
+    const clickHandle = () => setGoogleStep('done');
+    const returnHandle = () => setGoogleStep('connect');
 
     return (
         <>
@@ -19,14 +24,11 @@ const GoogleDont: React.FC<ISnopifyPage> = ({ step }) => {
             </svg>
             <h2 className={styles.title}>Dont use Gmail?</h2>
             <p className={styles.text}>Chad Beta is currently only integrated with Gmail. We’ll send you an email when Chad becomes compatible with your support ticket platform.</p>
-            <form className={styles.form}>
-                <p className={styles.label}>Platform</p>
-                place for radio button
-            </form>
-            <button className={styles.button} type='button'>Submit</button>
+            <SelectComponent data={dataArr} />
+            <button className={styles.button} type='button' onClick={clickHandle}>Submit</button>
             <p className={styles.text__link}>
                 Actually use Gmail?
-                <button className={styles.link} type='button' onClick={clickHandle}> Connect</button>
+                <button className={styles.link} type='button' onClick={returnHandle}>Connect</button>
             </p>
         </>
     )

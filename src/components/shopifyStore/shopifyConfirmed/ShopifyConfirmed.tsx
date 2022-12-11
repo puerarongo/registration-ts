@@ -1,16 +1,25 @@
 import React, { useEffect, useContext } from 'react';
 import { FormContext } from '../../formContext/formProvider';
 import styles from './ShopifyConfirmed.module.css';
-import IShopifyPage from '../../../types/typeShopifyStep';
 import picturePath from '../../../services/picturePath';
 
-const ShopifyConfirmed: React.FC<IShopifyPage> = ({ step }) => {
-    const { shopify, setShopify, setPageStatus } = useContext(FormContext);
-    const clickHandle = () => step('done');
+interface IShopifyConfirmed {
+    step: number,
+    setStep: Function,
+    shopifyStep: string,
+    setShopifyStep: Function
+}
+
+const ShopifyConfirmed: React.FC<IShopifyConfirmed> = ({ step, setStep, shopifyStep, setShopifyStep }) => {
+    const { setShopify, setPageStatus } = useContext(FormContext);
+    const clickHandle = () => {
+        setStep(step + 1);
+        setShopifyStep('already')
+    };
 
     const wrongStore = () => {
         setShopify('');
-        step('connect');
+        setShopifyStep('connect');
     };
 
     useEffect(() => { setPageStatus(true) }, [setPageStatus]);
@@ -18,7 +27,7 @@ const ShopifyConfirmed: React.FC<IShopifyPage> = ({ step }) => {
     return (
         <>
             <img className={styles.img} src={picturePath.raccoon} alt='raccoon face' />
-            {shopify ? (
+            {shopifyStep === 'already' ? (
                 <>
                     <h2 className={styles.token__title}>STORE-NAME already connected</h2>
                 </>

@@ -2,23 +2,35 @@ import React, { useEffect, useContext } from 'react';
 import { FormContext } from '../../formContext/formProvider';
 import styles from '../../shopifyStore/shopifyConnect/ShopifyConnect.module.css';
 import svgPath from '../../../services/svgPath';
-import ISnopifyPage from '../../../types/typeShopifyStep';
-import { googleGet } from '../../../services/authAPI';
+import { googleGet, register } from '../../../services/authAPI';
 
 
-const GoogleConnect: React.FC<ISnopifyPage> = ({ step }) => {
-    const { setGoogle, setPageStatus } = useContext(FormContext);
+interface IGoogleConnect {
+    step: number,
+    setStep: Function,
+    setGoogleStep: Function
+}
+
+const GoogleConnect: React.FC<IGoogleConnect> = ({ step, setStep, setGoogleStep }) => {
+    const { email, name, password, shopify, google, setGoogle, setPageStatus } = useContext(FormContext);
 
     useEffect(() => { setPageStatus(false) }, [setPageStatus]);
 
-    const doneHandle = async () => {
-        step('done');
+    const clickHandle = async () => {
+        setStep(step + 1);
         await googleGet()
             .then(res => setGoogle(res.data.token))
             .catch(err => console.error(err));
             //step('done');
+        
+        const body = { name, email, password, shop_token: shopify, google_token: google };
+        const res = await register(body)
+            .then()
+            .catch(err => console.error(err));
+        console.log('Google Done', res);
     };
-    const dontUseHandle = () => step('dont');
+
+    const dontUseHandle = () => setGoogleStep('dont');
 
     return (
         <>
@@ -53,7 +65,7 @@ const GoogleConnect: React.FC<ISnopifyPage> = ({ step }) => {
                     </div>
                 </li>
             </ul>
-            <button className={styles.button__google} type='button' onClick={doneHandle}>
+            <button className={styles.button__google} type='button' onClick={clickHandle}>
                 <span className={styles.svg__container}>
                     <svg className={styles.svg__google}>
                         <use href={svgPath.google + "#google"}></use>

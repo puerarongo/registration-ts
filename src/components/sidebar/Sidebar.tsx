@@ -37,8 +37,8 @@ const Sidebar: React.FC<ISidebar> = ({ step, setStep, active }) => {
         return (
             <QontoStepIconRoot ownerState={{ active }} className={className}>
                 {completed ? (
-                <CheckCircle className="QontoStepIcon-completedIcon" />
-            ) : active ? (
+                    <CheckCircle className="QontoStepIcon-completedIcon" />
+                ) : active ? (
                 <div className="QontoStepIcon-circleActive" />
             ) : (
                 <div className="QontoStepIcon-circle" />            

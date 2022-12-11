@@ -13,10 +13,13 @@ const ShopifyStore: React.FC<IStepPage> = ({ step, setStep }) => {
     
     return (
         <div className={styles.container}>
-            {shopifyStep === 'connect' ? <ShopifyConnect step={setShopifyStep} />
-                : shopifyStep === 'confirmed' ? <ShopifyConfirmed step={setShopifyStep} />
-                : shopifyStep === 'done' ? <ShopifyDone step={step} setStep={setStep} />
-                : <ShopifyDont step={setShopifyStep} />
+            {shopifyStep === 'connect' ? <ShopifyConnect setShopifyStep={setShopifyStep} />
+                : shopifyStep === 'confirmed' || shopifyStep === 'already' ?
+                    <ShopifyConfirmed step={step} setStep={setStep}
+                        shopifyStep={setShopifyStep} setShopifyStep={setShopifyStep} />
+                : shopifyStep === 'done' ? <ShopifyDone step={step} setStep={setStep}
+                        setShopifyStep={setShopifyStep} />
+                : <ShopifyDont setShopifyStep={setShopifyStep} />
             }
         </div>
     )

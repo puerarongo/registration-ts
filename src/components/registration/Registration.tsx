@@ -6,6 +6,7 @@ import Sidebar from '../sidebar/Sidebar';
 import Welcome from '../welcome/Welcome';
 import SnopifyStore from '../shopifyStore/ShopifyStore';
 import Google from '../google/Google';
+import DoneComponent from '../done/Done';
 
 
 const Registration: React.FC = () => {
@@ -34,7 +35,7 @@ const Registration: React.FC = () => {
                     {step === 1 ? <Welcome step={step} setStep={setStep} funcActive={setActive} />
                         : step === 2 ? <SnopifyStore step={step} setStep={setStep}/>
                         : step === 3 ? <Google step={step} setStep={setStep} />
-                        : <h2>Not Found</h2>
+                        : <DoneComponent />
                     }
                 </div>
             </div>

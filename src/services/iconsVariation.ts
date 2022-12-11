@@ -20,6 +20,15 @@ const QontoStepIconRoot = styled('div')<{ ownerState: { active?: boolean } }>(
             zIndex: 1,
             padding: '3px'
         },
+        '& .QontoStepIcon-completedIconReturn': {
+            width: "24px",
+            height: "24px",
+            color: '#fff',
+            background: "#5D7FA3",
+            borderRadius: "50%",
+            zIndex: 1,
+            padding: '3px'
+        },
         '& .QontoStepIcon-circleActive': {
             width: "24px",
             height: "24px",

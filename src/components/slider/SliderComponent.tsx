@@ -23,11 +23,10 @@ const SliderComponent: React.FC = () => {
                 modules={[Pagination]}
                 spaceBetween={50}
                 slidesPerView={1}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}>
+                >
                 {itemsArray.map((elem: string, index: number) => (
-                    <SwiperSlide>
-                        <div className={styles.container} key={index}>
+                    <SwiperSlide key={index}>
+                        <div className={styles.container}>
                             <div className={styles.item}>
                                 <svg className={styles.svg__slider}>
                                     <use href={svgPath.sliderIcon + "#sliderIcon"}></use>
