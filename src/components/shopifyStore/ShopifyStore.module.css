@@ -7,7 +7,7 @@
 
 @media screen and (min-width: 820px) and (max-width: 1349px) {
     .container {
-        @apply mx-auto mb-[50px] px-[72px] pt-[32px] pb-[64px] max-w-[540px] rounded-[8px];
+        @apply mx-auto px-[72px] pt-[32px] pb-[64px] max-w-[540px] rounded-[8px];
     }
 }
 

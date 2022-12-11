@@ -53,7 +53,7 @@ const GoogleConnect: React.FC<ISnopifyPage> = ({ step }) => {
                     </div>
                 </li>
             </ul>
-            <button className={styles.button__google} type='button'>
+            <button className={styles.button__google} type='button' onClick={doneHandle}>
                 <span className={styles.svg__container}>
                     <svg className={styles.svg__google}>
                         <use href={svgPath.google + "#google"}></use>
@@ -61,7 +61,6 @@ const GoogleConnect: React.FC<ISnopifyPage> = ({ step }) => {
                 </span>
                 <p className={styles.text__google}>Connect Gmail account</p>
             </button>
-            <button className={styles.button} type='button' onClick={doneHandle}>Connect Gmail account</button>
             <button className={styles.button__dont} type='button' onClick={dontUseHandle}>I dont use Gmail</button>
         </>
     )

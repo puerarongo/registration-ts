@@ -17,7 +17,8 @@
 }
 
 .button {
-    @apply block mb-[16px] py-[11px] w-[330px] text-[14px] leading-[21px] text-[#FFFFFF] bg-[#32ABF2] rounded-[8px] text-center cursor-pointer;
+    @apply block mb-[16px] py-[11px] w-[330px] text-[14px] leading-[21px] 
+    text-[#FFFFFF] bg-[#32ABF2] rounded-[8px] text-center cursor-pointer;
 }
 
 .text__link,

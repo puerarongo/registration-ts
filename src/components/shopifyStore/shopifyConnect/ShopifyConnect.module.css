@@ -66,6 +66,11 @@
     .button__google {
         @apply w-[396px];
     }
+
+    .button__dont {
+        @apply flex mb-[0px] ;
+        ;
+    }
 }
 
 @media screen and (min-width: 1350px) {
