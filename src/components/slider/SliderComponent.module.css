@@ -1,0 +1,19 @@
+.container {
+    @apply max-w-[364px] h-[110px]
+}
+
+.item {
+    @apply flex p-[16px] bg-[#134267] rounded-[8px];
+}
+
+.svg__slider {
+    @apply w-[80px] h-[32px] my-auto mr-[16px];
+}
+
+.text {
+    @apply font-normal text-[14px] leading-[21px] text-[#96CAF7];
+}
+
+.swiper-pagination-bullet-active {
+    @apply bg-[#96CAF7];
+}

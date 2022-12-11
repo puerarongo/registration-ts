@@ -4,6 +4,7 @@ import Media from 'react-media';
 import styles from './Sidebar.module.css';
 import svgPath from '../../services/svgPath';
 import IStepPage from '../../types/typeStepPage';
+import SliderComponent from '../slider/SliderComponent';
 
 // ! Material UI
 import Box from '@mui/material/Box';
@@ -139,7 +140,9 @@ const Sidebar: React.FC<ISidebar> = ({ step, setStep, active }) => {
                         </div>
                     )}
                         </Box>
-                        <div className={styles.slider}>slider place</div>
+                        <div className={styles.slider}>
+                            <SliderComponent />
+                        </div>
                     </div>
                 )}
                 </>

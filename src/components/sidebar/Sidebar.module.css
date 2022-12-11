@@ -50,7 +50,6 @@
 }
 
 
-
 /* ! =================================== MEDIA =================================== ! */
 
 @media screen and (min-width: 820px) and (max-width: 1349px) {
@@ -62,7 +61,7 @@
 
 @media screen and (min-width: 1350px) {
     .section {
-        @apply w-[40%] pt-[200px] pr-[120px] bg-gradient-to-b from-[#19476C] to-[#0D3251];
+        @apply w-[40%] pt-[200px] pr-[80px] bg-gradient-to-b from-[#19476C] to-[#0D3251];
     }
 
     .switch__container {

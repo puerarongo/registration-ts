@@ -5,7 +5,8 @@ import right_arrow from '../img/right_arrow.svg';
 import larrow_left from '../img/larrow_left.svg';
 import larrow_right from '../img/larrow_right.svg';
 import google from '../img/google.svg';
-import checkStep from '../img/checkStep.svg'
+import checkStep from '../img/checkStep.svg';
+import sliderIcon from '../img/sliderIcon.svg';
 
 const svgPath = {
     label,
@@ -15,7 +16,8 @@ const svgPath = {
     larrow_left,
     larrow_right,
     google,
-    checkStep
+    checkStep,
+    sliderIcon
 };
 
 export default svgPath;

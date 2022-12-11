@@ -1,6 +1,6 @@
 export const stepLaybleStyle = {
     ".MuiStepLabel-root.MuiStepLabel-vertical": {
-        padding: '0px 0px'
+        padding: '0px 0px',
     },
     ".MuiStepLabel-label.Mui-active": {
         color: "#fff",
