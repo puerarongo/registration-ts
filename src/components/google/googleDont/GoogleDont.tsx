@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect, useContext, useState } from 'react';
 import { FormContext } from '../../formContext/formProvider';
 import styles from '../../shopifyStore/shopifyDont/ShopifyDont.module.css';
 import svgPath from '../../../services/svgPath';
@@ -9,8 +9,9 @@ interface IGoogleDont {
 };
 
 const GoogleDont: React.FC<IGoogleDont> = ({ setGoogleStep }) => {
+    const [selectValue, setSelectVlaue] = useState<string>('');
     const { setPageStatus } = useContext(FormContext);
-    const dataArr = ['1', '2', '3'];
+    const dataArr = ['Microsoft Outlook', 'Yahoo', 'Brave', 'Other'];
 
     useEffect(() => { setPageStatus(false) }, [setPageStatus]);
 
@@ -24,7 +25,7 @@ const GoogleDont: React.FC<IGoogleDont> = ({ setGoogleStep }) => {
             </svg>
             <h2 className={styles.title}>Dont use Gmail?</h2>
             <p className={styles.text}>Chad Beta is currently only integrated with Gmail. We’ll send you an email when Chad becomes compatible with your support ticket platform.</p>
-            <SelectComponent data={dataArr} />
+            <SelectComponent data={dataArr} value={selectValue} setValue={setSelectVlaue}  />
             <button className={styles.button} type='button' onClick={clickHandle}>Submit</button>
             <p className={styles.text__link}>
                 Actually use Gmail?
