@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/registration-ts/static/css/main.2e2d52f4.css",
-    "main.js": "/registration-ts/static/js/main.1ac01cb4.js",
+    "main.css": "/registration-ts/static/css/main.ab7ee620.css",
+    "main.js": "/registration-ts/static/js/main.e2a3689c.js",
     "static/media/background.jpg": "/registration-ts/static/media/background.d79c0716f899b327db61.jpg",
     "static/media/raccoon.jpg": "/registration-ts/static/media/raccoon.b2f0dbeff13b3662317a.jpg",
     "static/media/label.svg": "/registration-ts/static/media/label.a81214793d7d566a1e79a888a6a7906b.svg",
@@ -15,11 +15,11 @@
     "static/media/larrow_left.svg": "/registration-ts/static/media/larrow_left.f0e21340509a2f62b6a853a841d5ceb4.svg",
     "static/media/right_arrow.svg": "/registration-ts/static/media/right_arrow.75bb959cd64379a664fddd671acbfdd4.svg",
     "static/media/left_arrow.svg": "/registration-ts/static/media/left_arrow.a8b8946925814071d27e3bc087fa3825.svg",
-    "main.2e2d52f4.css.map": "/registration-ts/static/css/main.2e2d52f4.css.map",
-    "main.1ac01cb4.js.map": "/registration-ts/static/js/main.1ac01cb4.js.map"
+    "main.ab7ee620.css.map": "/registration-ts/static/css/main.ab7ee620.css.map",
+    "main.e2a3689c.js.map": "/registration-ts/static/js/main.e2a3689c.js.map"
   },
   "entrypoints": [
-    "static/css/main.2e2d52f4.css",
-    "static/js/main.1ac01cb4.js"
+    "static/css/main.ab7ee620.css",
+    "static/js/main.e2a3689c.js"
   ]
 }
