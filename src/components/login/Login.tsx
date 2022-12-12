@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Formik } from 'formik';
 import svgPath from '../../services/svgPath';
 import styles from './Login.module.css';
 import { loginValidationSchema } from '../../services/yupValidation/loginValidationSchema';
 
+// ??? Material UI 
+import { IconButton} from '@mui/material';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
+import { TextField } from '@mui/material';
+import { passwordFieldStyle, errPasswordFieldStyle } from '../../services/muiStyled/stepLabelStyle';
+
+
+
 const Login: React.FC = () => {
+    const [showPassword, setShowPassword] = useState(false);
+    const handleClickShowPassword = () => setShowPassword(!showPassword);
+    const handleMouseDownPassword = () => setShowPassword(!showPassword);
+
     return (
         <section className={styles.section}>
             <div className={styles.container}>
@@ -53,17 +65,43 @@ const Login: React.FC = () => {
                     )}
                     <p  className={styles.label}>
                         Password
-                    </p>
-                    <input
-                        className={(errors.password && touched.password) ? styles.input__error : styles.input}
+                            </p>
+                            <div className={styles.password__container}>
+                                <TextField
+                                    sx={{
+                                        "& fieldset": { border: 'none' },
+                                        ...(errors.password && touched.password ?
+                                        {
+                                            ...errPasswordFieldStyle
+                                        } : {
+                                            ...passwordFieldStyle
+                                        })
+                                    }}
+                                    className={styles.input__password}
                         autoComplete='new-password'
                         name='password'
-                        type='password'
-                        placeholder='Enter password'
+                        type={showPassword ? 'text' : 'password'}
+                        placeholder='enter password'
                         value={values.password}
                         onBlur={handleBlur}
                         onChange={handleChange}
+                                    InputProps={{
+                            style: { fontFamily: "'Inter', sans-serif", },
+                            endAdornment: <>
+                                <IconButton
+                                    aria-label="toggle password visibility"
+                                    onClick={handleClickShowPassword}
+                                    onMouseDown={handleMouseDownPassword}
+                                    edge="end"
+                                >
+                                    {showPassword ?
+                                        <Visibility sx={{ color: '#32ABF2' }} /> : <VisibilityOff />
+                                    }
+                                </IconButton>
+                            </>,
+                        }}
                     />
+                    </div>     
                     {errors.password && touched.password ? (
                         <p className={styles.error__count}>{`${errors.password}`}</p>
                     ) : (

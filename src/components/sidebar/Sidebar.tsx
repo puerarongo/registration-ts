@@ -6,18 +6,18 @@ import svgPath from '../../services/svgPath';
 import IStepPage from '../../types/typeStepPage';
 import SliderComponent from '../slider/SliderComponent';
 
-// ! Material UI
+// ??? Material UI
 import Box from '@mui/material/Box';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Button from '@mui/material/Button';
 
-// ! Mobile Material UI
+// ??? Mobile Material UI
 import MobileStepper from '@mui/material/MobileStepper';
-import { stepLaybleStyle, mobileStepperStyle } from '../../services/stepLabelStyle';
+import { stepLaybleStyle, mobileStepperStyle } from '../../services/muiStyled/stepLabelStyle';
 
-import QontoStepIconRoot from '../../services/iconsVariation';
+import QontoStepIconRoot from '../../services/muiStyled/iconsVariation';
 import { StepIconProps } from '@mui/material/StepIcon';
 import CheckCircle from '@mui/icons-material/Check';
 

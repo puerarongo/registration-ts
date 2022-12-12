@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import styles from './Welcome.module.css';
 import IStepPage from '../../types/typeStepPage';
 import Media from 'react-media';
@@ -8,12 +8,23 @@ import { FormContext } from '../formContext/formProvider';
 import svgPath from '../../services/svgPath';
 import { registrationValidationSchema } from '../../services/yupValidation/registrationValidationSchema';
 
+// ??? Material UI 
+import { IconButton} from '@mui/material';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
+import { TextField } from '@mui/material';
+import { passwordFieldStyle, errPasswordFieldStyle } from '../../services/muiStyled/stepLabelStyle';
+
+
 interface IWelcome extends IStepPage {
   funcActive: Function
 }
 
 
 const Welcome: React.FC<IWelcome> = ({ step, setStep, funcActive }) => {
+  const [showPassword, setShowPassword] = useState(false);
+  const handleClickShowPassword = () => setShowPassword(!showPassword);
+  const handleMouseDownPassword = () => setShowPassword(!showPassword);
+  
   const { email, setEmail, name, setName, password, setPassword, setWelcomeActive } = useContext(FormContext);
 
     return (
@@ -94,16 +105,42 @@ const Welcome: React.FC<IWelcome> = ({ step, setStep, funcActive }) => {
                 <p  className={styles.label}>
                   Password
                 </p>
-                <input
-                  className={(errors.password && touched.password) ? styles.input__error : styles.input}
-                  autoComplete='new-password'
-                  name='password'
-                  type='password'
-                  placeholder='Enter password'
-                  value={values.password}
-                  onBlur={handleBlur}
-                  onChange={handleChange}
-                />
+                <div className={styles.password__container}>
+                  <TextField
+                    sx={{
+                      "& fieldset": { border: 'none' },
+                      ...(errors.password && touched.password ?
+                      {
+                        ...errPasswordFieldStyle
+                      } : {
+                        ...passwordFieldStyle
+                      })
+                    }}
+                    className={styles.input__password}
+                    autoComplete='new-password'
+                    name='password'
+                    type={showPassword ? 'text' : 'password'}
+                    placeholder='enter password'
+                    value={values.password}
+                    onBlur={handleBlur}
+                    onChange={handleChange}
+                    InputProps={{
+                      style: { fontFamily: "'Inter', sans-serif", },
+                        endAdornment: <>
+                          <IconButton
+                            aria-label="toggle password visibility"
+                            onClick={handleClickShowPassword}
+                            onMouseDown={handleMouseDownPassword}
+                            edge="end"
+                          >
+                            {showPassword ?
+                              <Visibility sx={{ color: '#32ABF2' }} /> : <VisibilityOff />
+                            }
+                              </IconButton>
+                          </>,
+                    }}
+                  />
+                </div>
                 {errors.password && touched.password ? (
                   <p className={styles.error__count}>{`${errors.password}`}</p>
                 ) : (

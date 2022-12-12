@@ -52,3 +52,25 @@ export const mobileStepperStyle = {
         background: '#C9D3E0'
     }
 };
+
+
+export const passwordFieldStyle = {
+    ".MuiInputBase-input": {
+        padding: '11px 17px',
+    },
+    ".MuiInputBase-root.MuiOutlinedInput-root": {
+        border: '1px solid #F8F9FC'
+    },
+    ".MuiInputBase-root.MuiOutlinedInput-root:hover": {
+        border: '1px solid #32ABF2'
+    }
+};
+
+export const errPasswordFieldStyle = {
+    ".MuiInputBase-input": {
+        padding: '11px 17px',
+    },
+    ".MuiInputBase-root.MuiOutlinedInput-root": {
+        border: '1px solid #F25137'
+    }
+};

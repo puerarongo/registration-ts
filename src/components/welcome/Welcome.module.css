@@ -19,10 +19,14 @@
 }
 
 .input,
+.input__password,
 .input__error {
-    @apply mb-[5px] py-[11px] pl-[17px] pr-[10px] text-[16px] leading-[24px]
-    border-[1px] border-solid border-[#F8F9FC]
-    text-[#030E16] bg-[#F8F9FC] rounded-[4px] w-[330px];
+    @apply mb-[5px] py-[11px] pl-[17px] pr-[10px] text-[16px] leading-[24px] text-[#030E16] bg-[#F8F9FC] rounded-[4px] w-[330px];
+}
+
+.input,
+.input__error {
+    @apply border-[1px] border-solid border-[#F8F9FC];
 }
 
 .input__error {
@@ -33,6 +37,10 @@
 .input:active,
 .input:focus {
     @apply border-[1px] border-solid border-[#32ABF2] transition-colors;
+}
+
+.password__container {
+    @apply max-w-[330px] mb-[5px];
 }
 
 .button {
@@ -70,8 +78,13 @@
     }
 
     .input,
+    .input__password,
     .input__error {
         @apply w-[396px];
+    }
+
+    .password__container {
+        @apply max-w-[396px]
     }
 
     .button {
@@ -86,8 +99,13 @@
     }
 
     .input,
+    .input__password,
     .input__error {
         @apply w-[400px];
+    }
+
+    .password__container {
+        @apply max-w-[400px]
     }
 
     .button {
