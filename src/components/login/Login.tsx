@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Formik } from 'formik';
 import svgPath from '../../services/svgPath';
 import styles from './Login.module.css';
+import { loginValidationSchema } from '../../services/yupValidation/loginValidationSchema';
 
 const Login: React.FC = () => {
     return (
@@ -18,10 +19,10 @@ const Login: React.FC = () => {
                 email: '',
                 password: '',
                 }}
-                //validationSchema={a}
+                validationSchema={loginValidationSchema}
                 onSubmit={(values) => {
                     const { email, password } = values;
-                    console.log(email, password)
+                    console.log("Login imitation", email, password)
                 }}
                 >
                 {({
@@ -37,7 +38,7 @@ const Login: React.FC = () => {
                         Email
                     </p>
                     <input
-                        className={styles.input}
+                        className={(errors.email && touched.email) ? styles.input__error : styles.input}
                         required
                         type="email"
                         placeholder="megachad@trychad.com"
@@ -45,12 +46,17 @@ const Login: React.FC = () => {
                         value={values.email}
                         onBlur={handleBlur}
                         onChange={handleChange}
-                    />
+                            />
+                    {errors.email && touched.email ? (
+                        <p className={styles.error__count}>{`${errors.email}`}</p>
+                    ) : (
+                        <span className={styles.default__count}></span>
+                    )}
                     <p  className={styles.label}>
                         Password
                     </p>
                     <input
-                        className={styles.input}
+                        className={(errors.password && touched.password) ? styles.input__error : styles.input}
                         required
                         autoComplete='new-password'
                         name='password'
@@ -60,7 +66,15 @@ const Login: React.FC = () => {
                         onBlur={handleBlur}
                         onChange={handleChange}
                     />
-                    <button className={styles.button} type="submit">
+                    {errors.password && touched.password ? (
+                        <p className={styles.error__count}>{`${errors.password}`}</p>
+                    ) : (
+                        <span className={styles.default__count}></span>
+                    )}
+                    <button className={styles.button} type="submit" onClick={() => {
+                            touched.email = true
+                            touched.password = true
+                        }}>
                         Create account
                     </button>
                     <p className={styles.text__link}>

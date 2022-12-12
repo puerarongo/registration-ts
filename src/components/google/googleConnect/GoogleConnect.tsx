@@ -12,12 +12,14 @@ interface IGoogleConnect {
 }
 
 const GoogleConnect: React.FC<IGoogleConnect> = ({ step, setStep, setGoogleStep }) => {
-    const { email, name, password, shopify, google, setGoogle, setPageStatus } = useContext(FormContext);
+    const { email, name, password, shopify, google,
+        setGoogle, setPageStatus, setGoogleActive } = useContext(FormContext);
 
     useEffect(() => { setPageStatus(false) }, [setPageStatus]);
 
     const clickHandle = async () => {
         setStep(step + 1);
+        setGoogleActive(true);
         await googleGet()
             .then(res => setGoogle(res.data.token))
             .catch(err => console.error(err));

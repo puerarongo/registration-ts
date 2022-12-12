@@ -29,20 +29,23 @@ interface ISidebar extends IStepPage {
 const Sidebar: React.FC<ISidebar> = ({ step, setStep, active }) => {
     const labelesArray: string[] =
         ["Welcome", "Connect your Shopify store", "Connect your customer support email", "Done"];
-    const { shopify, google } = useContext(FormContext);
+    const { shopify, google, welcomeActive, shopifyActive, googleActive } = useContext(FormContext);
 
     const QontoStepIcon = (props: StepIconProps) => {
         const { active, completed, className } = props;
     
         return (
             <QontoStepIconRoot ownerState={{ active }} className={className}>
-                {completed ? (
+                {completed || 
+                (active && welcomeActive && step === 1) ||
+                (active && shopifyActive && step === 2) ||
+                (active && googleActive && step === 3) ? (
                     <CheckCircle className="QontoStepIcon-completedIcon" />
-                ) : active ? (
-                <div className="QontoStepIcon-circleActive" />
-            ) : (
-                <div className="QontoStepIcon-circle" />            
-            )}
+                ) :
+                active ? (
+                    <div className="QontoStepIcon-circleActive" />
+                )  : (
+                <div className="QontoStepIcon-circle" />)}
             </QontoStepIconRoot>
         );
     };

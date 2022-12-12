@@ -10,12 +10,13 @@ interface IShopifyConnect {
 }
 
 const ShopifyConnect: React.FC<IShopifyConnect> = ({ setShopifyStep }) => {
-    const { setShopify, setPageStatus } = useContext(FormContext);
+    const { setShopify, setPageStatus, setShopifyActive } = useContext(FormContext);
 
     useEffect(() => { setPageStatus(false) }, [setPageStatus]);
 
     const connectHandle = async () => {
-            setShopifyStep('confirmed');
+        setShopifyStep('confirmed');
+        setShopifyActive(true);
         await shopifyGet('Axios')
             .then(res => setShopify(res.data.token))
             .catch(err => console.error(err));

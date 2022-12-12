@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { Formik } from 'formik';
 import { FormContext } from '../formContext/formProvider';
 import svgPath from '../../services/svgPath';
+import { registrationValidationSchema } from '../../services/yupValidation/registrationValidationSchema';
 
 interface IWelcome extends IStepPage {
   funcActive: Function
@@ -14,13 +15,6 @@ interface IWelcome extends IStepPage {
 
 const Welcome: React.FC<IWelcome> = ({ step, setStep, funcActive }) => {
   const { email, setEmail, name, setName, password, setPassword, setWelcomeActive } = useContext(FormContext);
-
-  //const clickHandler = (email: string, name: string, password: string) => {
-  //  setEmail(email);
-  //  setName(name);
-  //  setPassword(password);
-  //  nextStep();
-  //};
 
     return (
       <div className={styles.container}>
@@ -43,7 +37,7 @@ const Welcome: React.FC<IWelcome> = ({ step, setStep, funcActive }) => {
             name: name,
             password: password,
             }}
-            //validationSchema={a}
+            validationSchema={registrationValidationSchema}
             onSubmit={(values) => {
               const { email, name, password } = values;
               setEmail(email);
@@ -67,7 +61,7 @@ const Welcome: React.FC<IWelcome> = ({ step, setStep, funcActive }) => {
                   Email
                 </p>
                 <input
-                  className={styles.input}
+                  className={(errors.email && touched.email) ? styles.input__error : styles.input}
                   required
                   type="email"
                   placeholder="megachad@trychad.com"
@@ -76,11 +70,16 @@ const Welcome: React.FC<IWelcome> = ({ step, setStep, funcActive }) => {
                   onBlur={handleBlur}
                   onChange={handleChange}
                 />
+                {errors.email && touched.email ? (
+                  <p className={styles.error__count}>{`${errors.email}`}</p>
+                ) : (
+                  <span className={styles.default__count}></span>
+                )}
                 <p  className={styles.label}>
                   Name
                 </p>
                 <input
-                  className={styles.input}
+                  className={(errors.name && touched.name) ? styles.input__error : styles.input}
                   required
                   type="name"
                   placeholder="Mega Chad"
@@ -89,30 +88,41 @@ const Welcome: React.FC<IWelcome> = ({ step, setStep, funcActive }) => {
                   onBlur={handleBlur}
                   onChange={handleChange}
                 />
-                  <p  className={styles.label}>
-                    Password
-                  </p>
-                  <input
-                    className={styles.input}
-                    required
-                    autoComplete='new-password'
-                    name='password'
-                    type='password'
-                    placeholder='Enter password'
-                    // onCut={disableChange}
-                    // onCopy={disableChange}
-                    // onPaste={disableChange}
-                    value={values.password}
-                    onBlur={handleBlur}
-                    onChange={handleChange}
-                  />
-                  <button className={styles.button} type="submit">
+                {errors.name && touched.name ? (
+                  <p className={styles.error__count}>{`${errors.name}`}</p>
+                ) : (
+                  <span className={styles.default__count}></span>
+                )}
+                <p  className={styles.label}>
+                  Password
+                </p>
+                <input
+                  className={(errors.password && touched.password) ? styles.input__error : styles.input}
+                  required
+                  autoComplete='new-password'
+                  name='password'
+                  type='password'
+                  placeholder='Enter password'
+                  value={values.password}
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                />
+                {errors.password && touched.password ? (
+                  <p className={styles.error__count}>{`${errors.password}`}</p>
+                ) : (
+                  <span className={styles.default__count}></span>
+                )}
+              <button className={styles.button} type="submit" onClick={() => {
+                touched.email = true
+                touched.name = true
+                touched.password = true
+                }}>
                   Create account
-              </button>
-              <p className={styles.text__link}>
-                Already have an account?
-                <Link className={styles.link} to='login'>Login</Link>
-              </p>
+                </button>
+                <p className={styles.text__link}>
+                  Already have an account?
+                  <Link className={styles.link} to='login'>Login</Link>
+                </p>
               </form>
             )}
           </Formik>

@@ -12,6 +12,8 @@ export const FormProvider: React.FC = ({ children }) => {
     const [googleStep, setGoogleStep] = useState<string>('connect');
     const [pageStatus, setPageStatus] = useState<boolean>(false);
     const [welcomeActive, setWelcomeActive] = useState<boolean>(false);
+    const [shopifyActive, setShopifyActive] = useState<boolean>(false);
+    const [googleActive, setGoogleActive] = useState<boolean>(false);
 
     return (
         <FormContext.Provider
@@ -33,7 +35,11 @@ export const FormProvider: React.FC = ({ children }) => {
                 pageStatus,
                 setPageStatus,
                 welcomeActive,
-                setWelcomeActive
+                setWelcomeActive,
+                shopifyActive,
+                setShopifyActive,
+                googleActive,
+                setGoogleActive,
             }}
         >{children}</FormContext.Provider>
     )

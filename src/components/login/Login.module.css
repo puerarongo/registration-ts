@@ -26,10 +26,15 @@
     @apply mb-[8px] font-medium text-[12px] leading-[18px]
 }
 
-.input {
-    @apply mb-[24px] py-[11px] pl-[17px] pr-[10px] text-[16px] leading-[24px]
+.input,
+.input__error {
+    @apply mb-[5px] py-[11px] pl-[17px] pr-[10px] text-[16px] leading-[24px]
     border-[1px] border-solid border-[#F8F9FC]
     text-[#030E16] bg-[#F8F9FC] rounded-[4px] w-[330px];
+}
+
+.input__error {
+    @apply border-[#F25137];
 }
 
 .input:hover,
@@ -51,6 +56,14 @@
     @apply ml-[5px] text-[#32ABF2];
 }
 
+.error__count {
+    @apply m-0 ml-[5px] mb-[15px] text-[12px] text-[#F25137];
+}
+
+.default__count {
+    @apply block h-[14px] mb-[15px];
+}
+
 /* ! =================================== MEDIA =================================== ! */
 @media screen and (min-width: 820px) and (max-width: 1349px) {
     .section {
@@ -62,7 +75,8 @@
         box-shadow: 0px 5px 20px rgba(108, 117, 139, 0.2);
     }
 
-    .input {
+    .input,
+    .input__error {
         @apply w-[396px];
     }
 
@@ -82,7 +96,8 @@
         box-shadow: 0px 5px 20px rgba(108, 117, 139, 0.2);
     }
 
-    .input {
+    .input,
+    .input__error {
         @apply w-[400px];
     }
 
