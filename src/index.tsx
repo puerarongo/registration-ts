@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename='registration-ts'>
+    <BrowserRouter basename="registration-ts">
       <App />
     </BrowserRouter>
   </React.StrictMode>

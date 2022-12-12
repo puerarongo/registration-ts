@@ -1,114 +1,113 @@
 .container {
-    @apply mx-auto px-[32px] py-[16px] max-w-[390px] bg-white;
+  @apply mx-auto px-[32px] py-[16px] max-w-[390px] bg-white;
 }
 
 .main__title {
-    @apply mb-[8px] font-semibold text-[24px] leading-[29px] text-left text-[#134267];
+  @apply mb-[8px] font-semibold text-[24px] leading-[29px] text-left text-[#134267];
 }
 
 .text {
-    @apply mb-[32px] font-normal text-[14px] leading-[21px] text-left text-[#4F637D];
+  @apply mb-[32px] font-normal text-[14px] leading-[21px] text-left text-[#4F637D];
 }
 
 .form {
-    @apply text-[#4F637D];
+  @apply text-[#4F637D];
 }
 
 .label {
-    @apply mb-[8px] font-medium text-[12px] leading-[18px]
+  @apply mb-[8px] font-medium text-[12px] leading-[18px];
 }
 
 .input,
 .input__password,
 .input__error {
-    @apply mb-[5px] py-[11px] pl-[17px] pr-[10px] text-[16px] leading-[24px] text-[#030E16] bg-[#F8F9FC] rounded-[4px] w-[330px];
+  @apply mb-[5px] py-[11px] pl-[17px] pr-[10px] text-[16px] leading-[24px] text-[#030E16] bg-[#F8F9FC] rounded-[4px] w-[330px];
 }
 
 .input,
 .input__error {
-    @apply border-[1px] border-solid border-[#F8F9FC];
+  @apply border-[1px] border-solid border-[#F8F9FC];
 }
 
 .input__error {
-    @apply border-[#F25137];
+  @apply border-[#F25137];
 }
 
 .input:hover,
 .input:active,
 .input:focus {
-    @apply border-[1px] border-solid border-[#32ABF2] transition-colors;
+  @apply border-[1px] border-solid border-[#32ABF2] transition-colors;
 }
 
 .password__container {
-    @apply max-w-[330px] mb-[5px];
+  @apply max-w-[330px] mb-[5px];
 }
 
 .button {
-    @apply block mb-[16px] py-[11px] w-[330px] text-[14px] leading-[21px] text-[#FFFFFF] bg-[#32ABF2] 
-    rounded-[8px] text-center cursor-pointer ;
+  @apply block mb-[16px] py-[11px] w-[330px] text-[14px] leading-[21px] text-[#FFFFFF] bg-[#32ABF2] 
+    rounded-[8px] text-center cursor-pointer;
 }
 
 .text__link,
 .link {
-    @apply mb-[40px] text-center text-[12px] leading-[18px] text-[#4F637D];
+  @apply mb-[40px] text-center text-[12px] leading-[18px] text-[#4F637D];
 }
 
 .link {
-    @apply ml-[5px] text-[#32ABF2];
+  @apply ml-[5px] text-[#32ABF2];
 }
 
 .svg__label {
-    @apply mb-[16px] w-[100px] h-[32px];
+  @apply mb-[16px] w-[100px] h-[32px];
 }
 
 .error__count {
-    @apply m-0 ml-[5px] mb-[15px] text-[12px] text-[#F25137];
+  @apply m-0 ml-[5px] mb-[15px] text-[12px] text-[#F25137];
 }
 
 .default__count {
-    @apply block h-[14px] mb-[15px];
+  @apply block h-[14px] mb-[15px];
 }
-
 
 /* ! =================================== MEDIA =================================== ! */
 
 @media screen and (min-width: 820px) and (max-width: 1349px) {
-    .container {
-        @apply mx-auto px-[72px] pt-[32px] pb-[64px] max-w-[540px];
-    }
+  .container {
+    @apply mx-auto px-[72px] pt-[32px] pb-[64px] max-w-[540px];
+  }
 
-    .input,
-    .input__password,
-    .input__error {
-        @apply w-[396px];
-    }
+  .input,
+  .input__password,
+  .input__error {
+    @apply w-[396px];
+  }
 
-    .password__container {
-        @apply max-w-[396px]
-    }
+  .password__container {
+    @apply max-w-[396px];
+  }
 
-    .button {
-        @apply w-[396px];
-    }
+  .button {
+    @apply w-[396px];
+  }
 }
 
 @media screen and (min-width: 1350px) {
-    .container {
-        @apply h-[max-content] max-w-[480px] px-[40px] pt-[64px] pb-[35px] mt-[130px] mb-[50px] rounded-[8px];
-        box-shadow: 0px 5px 20px rgba(108, 117, 139, 0.2);
-    }
+  .container {
+    @apply h-[max-content] max-w-[480px] px-[40px] pt-[64px] pb-[35px] mt-[130px] mb-[50px] rounded-[8px];
+    box-shadow: 0px 5px 20px rgba(108, 117, 139, 0.2);
+  }
 
-    .input,
-    .input__password,
-    .input__error {
-        @apply w-[400px];
-    }
+  .input,
+  .input__password,
+  .input__error {
+    @apply w-[400px];
+  }
 
-    .password__container {
-        @apply max-w-[400px]
-    }
+  .password__container {
+    @apply max-w-[400px];
+  }
 
-    .button {
-        @apply w-[400px];
-    }
+  .button {
+    @apply w-[400px];
+  }
 }

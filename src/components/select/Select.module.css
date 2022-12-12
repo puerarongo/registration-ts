@@ -1,17 +1,15 @@
 .select {
-    @apply mb-[36px]
+  @apply mb-[36px];
 }
 
 @media screen and (min-width: 820px) and (max-width: 1349px) {
-
-    .select {
-        @apply w-[396px];
-    }
+  .select {
+    @apply w-[396px];
+  }
 }
 
 @media screen and (min-width: 1350px) {
-
-    .select {
-        @apply w-[400px];
-    }
+  .select {
+    @apply w-[400px];
+  }
 }

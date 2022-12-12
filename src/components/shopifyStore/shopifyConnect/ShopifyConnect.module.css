@@ -1,81 +1,80 @@
 .title {
-    @apply mb-[8px] font-semibold text-[24px] leading-[29px] text-left text-[#134267];
+  @apply mb-[8px] font-semibold text-[24px] leading-[29px] text-left text-[#134267];
 }
 
 .text {
-    @apply mb-[32px] font-normal text-[14px] leading-[21px] text-left text-[#4F637D];
+  @apply mb-[32px] font-normal text-[14px] leading-[21px] text-left text-[#4F637D];
 }
 
 .list {
-    @apply mb-[32px] px-[16px] py-[16px] bg-[#F8F9FC];
+  @apply mb-[32px] px-[16px] py-[16px] bg-[#F8F9FC];
 }
 
 .item {
-    @apply flex;
+  @apply flex;
 }
 
 .item__into {
-    @apply block;
+  @apply block;
 }
 
 .item__title {
-    @apply mb-[4px] font-medium text-[14px] leading-[21px] text-[#134267];
+  @apply mb-[4px] font-medium text-[14px] leading-[21px] text-[#134267];
 }
 
 .item__text {
-    @apply mb-[16px] font-normal text-[12px] leading-[18px] text-[#4F637D];
+  @apply mb-[16px] font-normal text-[12px] leading-[18px] text-[#4F637D];
 }
 
 .button,
 .button__google {
-    @apply mb-[16px] w-[330px] text-[14px] leading-[21px] text-[#FFFFFF];
+  @apply mb-[16px] w-[330px] text-[14px] leading-[21px] text-[#FFFFFF];
 }
 
 .button {
-    @apply block py-[11px] bg-[#32ABF2] rounded-[8px] text-center cursor-pointer;
+  @apply block py-[11px] bg-[#32ABF2] rounded-[8px] text-center cursor-pointer;
 }
 
 .button__dont {
-    @apply flex mb-[40px] mx-[auto] text-[12px] leading-[18px] text-[#4F637D] cursor-pointer;;
+  @apply flex mb-[40px] mx-[auto] text-[12px] leading-[18px] text-[#4F637D] cursor-pointer;
 }
 
 .button__google {
-    @apply flex bg-[#5383EC] ;
-    border: 1px solid #5383EC
+  @apply flex bg-[#5383EC];
+  border: 1px solid #5383ec;
 }
 
 .text__google {
-    @apply py-[15px] mx-auto;
-    text-align: center
+  @apply py-[15px] mx-auto;
+  text-align: center;
 }
 
 .svg__label {
-    @apply mb-[16px] max-w-[30px] h-[32px];
+  @apply mb-[16px] max-w-[30px] h-[32px];
 }
 
-.svg__container{
-    @apply p-[18px] bg-white;
+.svg__container {
+  @apply p-[18px] bg-white;
 }
 .svg__google {
-    @apply w-[18px] h-[18px];
+  @apply w-[18px] h-[18px];
 }
 
 /* ! =================================== MEDIA =================================== ! */
 @media screen and (min-width: 820px) and (max-width: 1349px) {
-    .button,
-    .button__google {
-        @apply w-[396px];
-    }
+  .button,
+  .button__google {
+    @apply w-[396px];
+  }
 
-    .button__dont {
-        @apply flex mb-[0px] ;
-        ;
-    }
+  .button__dont {
+    @apply flex mb-[0px];
+  }
 }
 
 @media screen and (min-width: 1350px) {
-    .button,
-    .button__google {
-        @apply w-[400px];
-    }
+  .button,
+  .button__google {
+    @apply w-[400px];
+  }
 }

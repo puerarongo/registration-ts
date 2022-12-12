@@ -1,43 +1,43 @@
 .svg__label {
-    @apply mb-[16px] w-[100px] h-[32px];
+  @apply mb-[16px] w-[100px] h-[32px];
 }
 
 .title {
-    @apply mb-[8px] font-semibold text-[24px] leading-[29px] text-left text-[#134267];
+  @apply mb-[8px] font-semibold text-[24px] leading-[29px] text-left text-[#134267];
 }
 
 .text {
-    @apply mb-[32px] font-normal text-[14px] leading-[21px] text-left text-[#4F637D];
+  @apply mb-[32px] font-normal text-[14px] leading-[21px] text-left text-[#4F637D];
 }
 
 .label {
-    @apply mb-[8px] font-medium text-[12px] leading-[18px]
+  @apply mb-[8px] font-medium text-[12px] leading-[18px];
 }
 
 .button {
-    @apply block mb-[16px] py-[11px] w-[330px] text-[14px] leading-[21px] 
+  @apply block mb-[16px] py-[11px] w-[330px] text-[14px] leading-[21px] 
     text-[#FFFFFF] bg-[#32ABF2] rounded-[8px] text-center cursor-pointer;
 }
 
 .text__link,
 .link {
-    @apply text-center text-[12px] leading-[18px] text-[#4F637D];
+  @apply text-center text-[12px] leading-[18px] text-[#4F637D];
 }
 
 .link {
-    @apply ml-[5px] text-[#32ABF2];
+  @apply ml-[5px] text-[#32ABF2];
 }
 
 /* ! =================================== MEDIA =================================== ! */
 
 @media screen and (min-width: 820px) and (max-width: 1349px) {
-    .button {
-        @apply w-[396px];
-    }
+  .button {
+    @apply w-[396px];
+  }
 }
 
 @media screen and (min-width: 1350px) {
-    .button {
-        @apply w-[400px];
-    }
+  .button {
+    @apply w-[400px];
+  }
 }

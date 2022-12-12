@@ -10,16 +10,16 @@ import checkStepInactive from '../img/checkStepInactive.svg';
 import sliderIcon from '../img/sliderIcon.svg';
 
 const svgPath = {
-    label,
-    check,
-    left_arrow,
-    right_arrow,
-    larrow_left,
-    larrow_right,
-    google,
-    checkStep,
-    checkStepInactive,
-    sliderIcon
+  label,
+  check,
+  left_arrow,
+  right_arrow,
+  larrow_left,
+  larrow_right,
+  google,
+  checkStep,
+  checkStepInactive,
+  sliderIcon,
 };
 
 export default svgPath;
