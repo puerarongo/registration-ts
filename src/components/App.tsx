@@ -3,6 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import { FormProvider } from './formContext/formProvider';
 import Registration from './registration/Registration';
 import Login from './login/Login';
+import NotFoundComponent from './notFound/NotFound';
+
 
 const App: React.FC = () => {
   return (
@@ -13,7 +15,8 @@ const App: React.FC = () => {
             <Registration />
           </FormProvider>
         } />
-        <Route path="login" element={ <Login /> }/>
+        <Route path="login" element={<Login />} />
+        <Route path="*" element={ <NotFoundComponent /> }/>
       </Routes>
     </>
   );
