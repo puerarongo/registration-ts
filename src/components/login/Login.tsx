@@ -39,7 +39,6 @@ const Login: React.FC = () => {
                     </p>
                     <input
                         className={(errors.email && touched.email) ? styles.input__error : styles.input}
-                        required
                         type="email"
                         placeholder="megachad@trychad.com"
                         name="email"
@@ -57,7 +56,6 @@ const Login: React.FC = () => {
                     </p>
                     <input
                         className={(errors.password && touched.password) ? styles.input__error : styles.input}
-                        required
                         autoComplete='new-password'
                         name='password'
                         type='password'

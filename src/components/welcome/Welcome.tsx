@@ -60,9 +60,8 @@ const Welcome: React.FC<IWelcome> = ({ step, setStep, funcActive }) => {
                 <p className={styles.label}>
                   Email
                 </p>
-                <input
+              <input
                   className={(errors.email && touched.email) ? styles.input__error : styles.input}
-                  required
                   type="email"
                   placeholder="megachad@trychad.com"
                   name="email"
@@ -80,7 +79,6 @@ const Welcome: React.FC<IWelcome> = ({ step, setStep, funcActive }) => {
                 </p>
                 <input
                   className={(errors.name && touched.name) ? styles.input__error : styles.input}
-                  required
                   type="name"
                   placeholder="Mega Chad"
                   name="name"
@@ -98,7 +96,6 @@ const Welcome: React.FC<IWelcome> = ({ step, setStep, funcActive }) => {
                 </p>
                 <input
                   className={(errors.password && touched.password) ? styles.input__error : styles.input}
-                  required
                   autoComplete='new-password'
                   name='password'
                   type='password'
